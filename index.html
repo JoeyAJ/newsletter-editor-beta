@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>又松大學 Newsletter 編輯器</title><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>又松大學校友通訊編輯器</title><style>
 :root{font-family:Arial,'Noto Sans KR','Malgun Gothic',sans-serif;color:#18212a;background:#edf1f5}*{box-sizing:border-box}body{margin:0}.app{display:grid;grid-template-columns:380px minmax(0,1fr);height:100vh;overflow:hidden}.side{min-height:0;overscroll-behavior:contain;background:white;border-right:1px solid #d7dee8;padding:18px;max-height:100vh;overflow:auto}.side h2{margin:0 0 4px;font-size:21px}.sub{color:#66717d;font-size:12px;margin:0 0 15px}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 16px}.btn{background:#233a52;color:white;border:0;border-radius:7px;padding:9px 11px;font-weight:600;cursor:pointer;font-size:12px}.btn.secondary{background:#e7edf3;color:#203548}.btn.warning{background:#fff2ed;color:#ad4029}.group{border:1px solid #dbe1e8;border-radius:9px;margin:12px 0;overflow:hidden}.group summary{font-weight:700;background:#f5f7f9;padding:11px;cursor:pointer}.inner{padding:12px}.field{margin-bottom:10px}.field label{display:block;font-size:12px;font-weight:700;color:#4c5968;margin:0 0 5px}input,textarea,select{font:inherit;width:100%;border:1px solid #ccd5df;border-radius:6px;padding:8px;background:white;font-size:12px}textarea{min-height:88px;resize:vertical;line-height:1.55}.tiny{font-size:11px;color:#687480}.item{border:1px solid #dde4ec;border-radius:7px;padding:10px;margin:10px 0;background:#fdfefe}.item-head{display:flex;align-items:center;justify-content:space-between;gap:5px}.item-head strong{font-size:12px}.minirow{display:flex;gap:5px}.small{font-size:11px;padding:5px 7px}.workspace{height:100vh;min-height:0;overscroll-behavior:contain;padding:25px 20px 60px;overflow:auto}.note{max-width:850px;margin:0 auto 12px;font-size:12px;color:#6d7783}.page{width:794px;min-height:1123px;background:white;margin:0 auto;box-shadow:0 8px 30px #0002;padding:28px 29px 22px;color:#111;overflow:hidden}.mast{border-top:6px double #111;border-bottom:6px double #111;display:grid;grid-template-columns:125px 1fr 120px;align-items:center;min-height:126px;margin-bottom:14px}.schoolmark{border-right:1px solid #444;height:108px;display:flex;align-items:center;justify-content:center;padding:12px}.schoolmark img{max-height:90px;max-width:100px;object-fit:contain}.placeholder-logo{border:4px solid #173d67;border-radius:50%;height:94px;width:94px;display:flex;align-items:center;justify-content:center;text-align:center;color:#173d67;font-size:12px;font-weight:bold;padding:8px}.mast-title{text-align:center;padding:8px}.univ{font-size:17px}.newsletter{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:54px;letter-spacing:-1px;line-height:1.09}.korean{font-size:12px}.issue{border-left:1px solid #444;text-align:right;padding:0 4px 0 10px}.month{font-size:69px;line-height:1;color:#f34e39;font-weight:800}.year{font-size:13px}.vol{font-size:13px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.column:first-child{padding-right:10px;border-right:1px solid #ececec}.bar{display:flex;align-items:center;gap:0;margin:2px 0 16px}.bar:before,.bar:after{content:"";height:1px;background:#666;flex:1}.pill{display:inline-block;border:1px solid #555;border-radius:25px;padding:4px 19px;white-space:nowrap;font-weight:800;font-size:17px}.pill.pink{background:#f3cbd1}.pill.blue{background:#c9ebee}.article{margin:0 0 24px;break-inside:avoid;page-break-inside:avoid}.article-head{display:flex;gap:6px;align-items:flex-start;justify-content:space-between}.article h3{font-size:15px;line-height:1.34;white-space:pre-line;margin:0 0 5px;letter-spacing:-.45px}.underline{height:2px;background:#f56b5b;width:75%;margin:0 0 9px}.article-body{font-size:11.6px;line-height:1.65;white-space:pre-line;overflow-wrap:anywhere}.article-image{width:100%;height:auto;max-height:190px;object-fit:contain;margin:5px 0}.article-image.float{width:40%;float:right;margin:2px 0 5px 8px;max-height:170px;object-fit:cover}.qr{width:45px;height:45px;object-fit:contain;flex:none}.qr-placeholder{width:45px;height:45px;border:1px dashed #888;font-size:9px;color:#777;display:flex;align-items:center;justify-content:center;text-align:center;flex:none}.footer{margin-top:14px;border-top:1px solid #333;padding-top:10px;display:flex;gap:10px;justify-content:space-between;font-size:9px}.footer strong{font-size:13px}.noitems{font-size:12px;color:#888;border:1px dashed #aaa;padding:15px;text-align:center}@media(max-width:1150px){.app{grid-template-columns:1fr}.side{max-height:none}.workspace{overflow-x:auto}}@page{size:A4 portrait;margin:0}@media print{.app{display:block;height:auto;overflow:visible}.side,.note{display:none!important}.workspace{height:auto;padding:0;overflow:visible}.page{margin:0;box-shadow:none;width:210mm;min-height:297mm}@page{size:A4;margin:0}body{background:white}.side,.note{display:none!important}.app{display:block}.workspace{padding:0;overflow:visible}.page{box-shadow:none;width:210mm;min-height:297mm;padding:7mm 8mm 6mm;margin:0}.article{break-inside:avoid} .columns{gap:5mm}}
 
 /* Multiple editorial layouts and heading styles */
@@ -297,11 +297,41 @@ input[type=range]{accent-color:#245883}
 /* Contact dialog */
 .nexaeon-contact-overlay{position:fixed;inset:0;background:rgba(12,26,45,.52);display:none;place-items:center;z-index:99999;padding:20px}.nexaeon-contact-overlay.is-open{display:grid}.nexaeon-contact-dialog{width:min(100%,440px);background:#fff;color:#1c344f;border-radius:16px;box-shadow:0 18px 70px #0004;padding:24px;line-height:1.6}.nexaeon-contact-dialog h3{font-size:20px;margin:0 0 9px}.nexaeon-contact-dialog p{margin:0 0 17px;font-size:13px;color:#54677e}.nexaeon-email-box{background:#eef4fb;border:1px solid #d2dfef;border-radius:10px;padding:13px;overflow-wrap:anywhere;font-weight:700;font-size:16px}.nexaeon-contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.nexaeon-contact-actions button,.nexaeon-contact-actions a{border:1px solid #cbd8e7;background:#fff;color:#234768;border-radius:8px;padding:10px 12px;cursor:pointer;text-decoration:none;font-weight:700;font-size:12px}.nexaeon-contact-actions .primary{background:#1b3e64;color:#fff}
 @media print{.nex-pages-container{display:block!important}.nex-pages-container .nex-sheet{transform:none!important}.preview-toolbar,.sheet-flow-bar,.side,.note,.nexaeon-footer,.nex-pane-handle,.nexaeon-contact-overlay{display:none!important}.nex-sheet{outline:none!important;cursor:default}.nex-sheet:after{display:none!important}.workspace{background:#fff!important}.nex-pages-container{max-width:none;margin:0}}
+
+/* Alumni brand defaults: navy + teal, locked for the regular issue. Advanced layouts keep their own rules. */
+.page{--ws-navy:#122742;--ws-teal:#0a7c88;font-family:"Noto Sans KR","Malgun Gothic","Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
+.page .mast{border-top:6px solid var(--ws-navy);border-bottom:3px solid var(--ws-teal)}
+.page .month{color:var(--ws-teal)}
+.page .newsletter{color:var(--ws-navy);font-family:Georgia,"Noto Serif KR","Noto Serif TC","PMingLiU",serif}
+.page .univ,.page .korean{color:var(--ws-navy)}
+.page .underline{background:var(--ws-teal)}
+.page .pill.pink{background:#d7eef0}
+.page .pill.blue{background:#e4ebf3}
+.page .placeholder-logo{border-color:var(--ws-navy);color:var(--ws-navy);font-size:11px;line-height:1.35}
+.template-option strong{display:flex;align-items:center;gap:6px}
+.template-gallery.alumni .template-thumb{height:86px;padding:6px 7px;gap:4px}
+.template-gallery.alumni .thumb-photo{height:24px}
+.tpl-code{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:#122742;color:#fff;font-size:11px;font-weight:800}
+.brand-note{font-size:11px;color:#24515c;background:#f3fafb;border-radius:7px;padding:8px 10px;margin:0 0 8px;line-height:1.5}
+.bilingual-note{background:#eef6f8;border-left:3px solid #0a7c88;border-radius:6px;padding:8px 10px;margin:2px 0 10px;font-size:12px;line-height:1.5;color:#1d4c56}
+.bilingual-note p{margin:4px 0 0}
+.preflight{border-radius:9px;padding:10px 12px;font-size:12px;line-height:1.55}
+.preflight strong{display:block;margin-bottom:4px}
+.preflight p{margin:0}
+.preflight ul{margin:0;padding-left:18px}
+.preflight.ok{background:#e8f6ef;color:#1c5b3a;border:1px solid #b7e0c8}
+.preflight.warn{background:#fff4f2;color:#8d3428;border:1px solid #f0c2bb}
+.proof-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.proof-list label{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.45;color:#24384c;font-weight:600}
+.proof-list input{width:auto;margin-top:2px;flex:none}
+.export-actions .span-2{grid-column:1/-1}
+.btn-wechat{background:#0c7a48!important;color:#fff!important}
+#styleEdit details details.design-accordion{margin-top:8px}
 </style>
 </head><body><div class="app nex-resizable"><aside class="side">
 <div class="ux-top">
 <div class="lang-controls" role="group" data-i18n-attr="aria-label:lang.label"><button type="button" data-act="lang" data-lang="zh-TW" lang="zh-Hant">繁體中文</button><button type="button" data-act="lang" data-lang="ko" lang="ko">한국어</button><button type="button" data-act="lang" data-lang="en" lang="en">English</button></div>
-<div class="ux-titlebar"><h2 data-i18n="app.title">Newsletter 編輯器</h2><button type="button" class="manual-btn" id="manualBtn" data-act="manual-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5"/><path d="M9 7.5h7M9 11h5"/></svg><span data-i18n="man.button"></span></button></div><p class="sub" data-i18n="app.subtitle"></p>
+<div class="ux-titlebar"><h2 data-i18n="app.title">校友通訊編輯器</h2><button type="button" class="manual-btn" id="manualBtn" data-act="manual-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5"/><path d="M9 7.5h7M9 11h5"/></svg><span data-i18n="man.button"></span></button></div><p class="sub" data-i18n="app.subtitle"></p>
 <nav class="ux-nav" role="tablist" data-i18n-attr="aria-label:nav.label">
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="info"><span class="tab-step">1</span><span data-i18n="tab.info"></span></button>
 <button type="button" class="ux-tab" role="tab" data-act="tab" data-tab="layout"><span class="tab-step">2</span><span data-i18n="tab.layout"></span></button>
@@ -323,10 +353,12 @@ input[type=range]{accent-color:#245883}
 <div id="partsEdit"></div>
 </section>
 <section class="pane" data-pane="export" role="tabpanel" hidden>
+<details class="group" open><summary data-i18n="proof.title"></summary><div class="inner"><ul class="proof-list" id="proofList"></ul><p class="tiny" data-i18n="proof.note"></p></div></details>
+<details class="group" open><summary data-i18n="preflight.title"></summary><div class="inner"><div id="preflight" class="preflight" role="status"></div><p class="tiny" data-i18n="preflight.note"></p></div></details>
 <details class="group" open><summary data-i18n="export.group"></summary><div class="inner">
-<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn btn-canva" data-act="export-canva"><span class="canva-mark" aria-hidden="true">C</span><span data-i18n="export.canva"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button></div>
+<div class="export-actions"><button type="button" class="btn" data-act="export-pdf" data-i18n="export.pdf"></button><button type="button" class="btn secondary" data-act="export-png"><span data-i18n="export.png"></span></button><button type="button" class="btn secondary" data-act="export-png-all"><span data-i18n="export.pngAll"></span></button><button type="button" class="btn btn-canva" data-act="export-canva"><span class="canva-mark" aria-hidden="true">C</span><span data-i18n="export.canva"></span></button><button type="button" class="btn secondary" data-act="export-json" data-i18n="export.json"></button><button type="button" class="btn secondary" data-act="export-import" data-i18n="export.import"></button><button type="button" class="btn btn-wechat span-2" data-act="export-wechat" data-i18n="export.wechat"></button><button type="button" class="btn secondary span-2" data-act="export-wechat-preview" data-i18n="export.wechatPreview"></button></div>
 <input type="file" id="importFile" accept="application/json,.json" hidden>
-<p class="tiny" data-i18n="export.canvaHint"></p><p class="tiny" data-i18n="export.pngNote"></p></div></details>
+<p class="tiny" data-i18n="export.canvaHint"></p><p class="tiny" data-i18n="export.pngNote"></p><p class="tiny" data-i18n="export.wechatHint"></p></div></details>
 <details class="group" open><summary data-i18n="help.title"></summary><div class="inner"><button type="button" class="btn secondary manual-link" data-act="manual-open" data-i18n="man.open"></button><button type="button" class="btn secondary manual-link" data-act="demo-run" data-i18n="demo.play"></button><div class="tiny" data-i18n="help.body"></div></div></details>
 </section>
 </div>
@@ -342,17 +374,32 @@ input[type=range]{accent-color:#245883}
 /* ===== i18n: one dictionary for every piece of editor UI text (zh-TW / ko / en) ===== */
 const translations={
 'zh-TW':{
- 'app.docTitle':'又松大學 Newsletter 編輯器','app.title':'Newsletter 編輯器','app.subtitle':'多頁 A4 校園電子報 · 每篇可上傳多張圖片 · PDF／PNG 匯出',
+ 'app.docTitle':'又松大學校友通訊編輯器','app.title':'校友通訊編輯器','app.subtitle':'多頁 A4 校友通訊 · 版型 A–D · PDF／PNG／微信精簡版',
  'lang.label':'介面語言','nav.label':'編輯功能分類',
  'tab.info':'基本資料','tab.layout':'排版設計','tab.content':'內容編輯','tab.export':'匯出',
- 'hint.info':'設定學校名稱、期數、Logo 與頁尾資訊，這些資料會套用到所有頁面。',
- 'hint.layout':'為目前頁面選擇 11 款排版模板與 16 款欄目抬頭樣式，右側即時預覽。',
+ 'hint.info':'設定學校名稱、期數、校徽與頁尾。這些會出現在每一頁。韓文版與中文版請各做一份。',
+ 'hint.layout':'先選校友版型 A–D，需要時再打開「更多版型」。欄目抬頭仍有 16 款，右側即時預覽。',
  'hint.content':'依「A4 頁面 → Part → 文章／圖片」編輯。點選文章標題即可展開或收合。',
- 'hint.export':'列印或另存 PDF、保存 PNG，並以 JSON 備份或匯入作品。',
+ 'hint.export':'匯出前先看校對清單與預檢。A4 用 PDF／PNG／Canva；微信轉發用精簡版。作品請以 JSON 備份。',
+ 'alumni.names':['溫暖敘事','現代連結','專業成長','同行未來'],
+ 'alumni.desc':['大圖引入與人物故事，適合校友重逢、肖像','雙欄模組，適合聚會、合作與網絡連結','網格摘要，適合獲獎、研究與成果','時間軸與圖文節奏，適合校園歷程與同行'],
+ 'part.alumniPresets':['校園近況','校友故事','榮譽成果','活動資訊','校友互動'],
+ 'design.alumniTitle':'校友期刊版型 A–D','design.alumniHint':'先選這四款。A 溫暖敘事、B 現代連結、C 專業成長、D 同行未來。已輸入的內容會保留，右側立即預覽。','design.moreTitle':'更多版型','design.moreHint':'進階版面。日常校友通訊請優先使用上方 A–D。','design.brandNote':'校友期刊預設為又松海軍藍與青色、襯線主標，方便每期看起來像同一份刊物。進階版型保留各自配色。這裡沒有另外的配色系統。',
+ 'pair.title':'韓文與中文是兩份文件','pair.hint':'韓文版與中文版請分開編輯、分開匯出，再依同一期互相校對。沒有雲端協作。下方備註只存在這份本機文件，不會印在版面上。',
+ 'field.pairedNote':'配對版本備註（不會印出）','ph.pairedNote':'例如：對應韓文版 2026年11月／檔名 alumni-ko-2026-11',
+ 'logo.encourage':'建議上傳又松大學校徽，讓每期報頭一致。尚未上傳時，匯出前會提醒。','logo.placeholder':'上傳\n校徽',
+ 'preflight.title':'匯出前檢查','preflight.note':'紅框代表該頁超出 A4。可縮短內容，或用「自動接續到下一頁」。缺少校徽也會列在這裡。','preflight.okTitle':'可以匯出','preflight.ok':'目前沒有超出 A4 的頁面，而且已有校徽。','preflight.warnTitle':'匯出前請看這些提醒','preflight.overflow':'第 {pages} 頁超出 A4（預覽區紅框）。正式 PDF／PNG 可能被裁切。','preflight.logo':'尚未上傳校徽。校友通訊建議每期都放上又松大學 Logo。','preflight.confirm':'仍要繼續匯出嗎？',
+ 'proof.title':'校對清單','proof.note':'勾選只存在這份本機文件（含 JSON 備份），不會印在版面上，也不會阻擋匯出。','proof.names':'姓名、職稱、單位已核對','proof.dates':'活動日期、地點、期數已核對','proof.photos':'照片已取得使用授權','proof.bilingual':'若另有韓文或中文配對版，事實（人名、日期、數字）已互相對過','proof.mobile':'已看過微信精簡版，手機上標題與圖片清楚',
+ 'export.wechat':'下載微信精簡版（HTML）','export.wechatPreview':'預覽精簡版','export.wechatHint':'單欄手機頁：標題、短文與圖片，方便轉發微信。不是 A4。完整版仍用上方 PDF、PNG 或 Canva PPTX。','wechat.banner':'又松大學校友通訊 · 手機精簡版（非正式 A4）','wechat.footer':'本頁供微信閱讀與轉發。完整版以 A4 PDF 為準。',
+ 'sample.alumni.subtitle':'又松大學校友通訊 · 동문 소식','sample.alumni.issuer':'又松大學校友','sample.alumni.paired':'韓文配對版請另存一份文件','sample.alumni.partLeft':'校友故事','sample.alumni.partRight':'校園近況',
+ 'sample.alumni.a1title':'好久不見\n— 回到母校的校友','sample.alumni.a1body':'請寫下畢業後的近況。\n發行前請核對姓名、職稱，並確認照片可以使用。',
+ 'sample.alumni.a2title':'另一個語言版本請分開做','sample.alumni.a2body':'韓文版是另一份文件。\n人名、日期、數字請與配對版本一致。此段是示範。',
+ 'sample.alumni.a3title':'校園近況一則','sample.alumni.a3body':'只留校友需要知道的消息。\n請寫上出處與日期。',
+ 'sample.alumni.a4title':'校友返校日','sample.alumni.a4body':'- 日期：YYYY. MM. DD.\n- 地點：又松大學\n- 詢問：請改成承辦單位',
  'status.autosave':'自動儲存已啟用','status.saved':'自動儲存已啟用 · {time} 已儲存','status.failed':'自動儲存失敗，請匯出 JSON 備份',
- 'info.group':'學校與期刊資料',
- 'field.university':'學校英文名稱','field.mastTitle':'主標題（預設 NEWSLETTER）','field.subtitle':'副標題（韓文）','field.month':'月份','field.year':'年度','field.volume':'期數','field.issuer':'發行單位','field.address':'地址／頁尾','field.logo':'學校 Logo（上傳圖片）',
- 'ph.university':'例如：Woosong University','ph.mastTitle':'例如：NEWSLETTER','ph.subtitle':'輸入副標題','ph.month':'輸入月份（例如 11）','ph.year':'輸入年度（例如 2026）','ph.volume':'輸入期數','ph.issuer':'輸入發行單位','ph.address':'輸入地址或頁尾資訊',
+ 'info.group':'學校與校友通訊資料',
+ 'field.university':'學校英文名稱','field.mastTitle':'主標題（預設 ALUMNI）','field.subtitle':'副標題（報頭第二行）','field.month':'月份','field.year':'年度','field.volume':'期數','field.issuer':'發行單位','field.address':'地址／頁尾','field.logo':'學校 Logo（上傳圖片）',
+ 'ph.university':'例如：Woosong University','ph.mastTitle':'例如：ALUMNI','ph.subtitle':'輸入副標題','ph.month':'輸入月份（例如 11）','ph.year':'輸入年度（例如 2026）','ph.volume':'輸入期數','ph.issuer':'輸入發行單位','ph.address':'輸入地址或頁尾資訊',
  'ph.partTitle':'輸入 Part 抬頭文字','ph.articleTitle':'輸入文章標題…','ph.articleBody':'在此輸入正文或活動資訊…',
  'logo.uploaded':'已上傳 Logo','logo.remove':'移除 Logo','logo.alt':'學校 Logo 縮圖',
  'reset.button':'重設示範內容','reset.hint':'會清除目前所有頁面與內容並回到示範模板，建議先匯出 JSON 備份。',
@@ -433,7 +480,7 @@ const translations={
  "man.s2.points":["學校名稱、主標題、副標題、月份、年度、期數。", "發行單位與地址會顯示在每一頁的頁尾。", "按「選擇圖片」上傳學校 Logo。", "最下方的「重設示範內容」會清空全部內容，使用前請先匯出 JSON 備份。"],
  "man.s3.title":"選擇版面與抬頭樣式",
  "man.s3.lead":"在「② 排版設計」點一下模板即可套用到目前頁面，右邊立即預覽。",
- "man.s3.points":["11 款整頁排版模板：經典雙欄、圖文卡片、雜誌、報章等。", "16 款欄目抬頭樣式（例如 President’s Message 的外框）。", "每一頁可以用不同版面；續頁可改用「精簡頁首」節省空間。", "可勾選「空白圖片位置顯示示範圖片」，先看整體效果。"],
+ "man.s3.points":["校友版型 A–D（溫暖敘事、現代連結、專業成長、同行未來）；其餘收在「更多版型」。", "16 款欄目抬頭樣式（例如 President’s Message 的外框）。", "每一頁可以用不同版面；續頁可改用「精簡頁首」節省空間。", "可勾選「空白圖片位置顯示示範圖片」，先看整體效果。"],
  "man.s4.title":"頁面、Part 與文章",
  "man.s4.lead":"在「③ 內容編輯」中，內容的結構是：A4 頁面 → Part（欄目區塊）→ 文章。",
  "man.s4.points":["「＋ 新增 A4 頁」增加頁面；點「1 / 3」等按鈕切換要編輯的頁面。", "「＋ 新增 Part」增加欄目，可放在左欄、右欄或全寬。", "Part 抬頭可從常用英文清單選擇，也可以自己輸入。", "點文章標題即可展開編輯；↑ ↓ 調整順序，「刪除」移除。"],
@@ -447,7 +494,7 @@ const translations={
  "man.s7.lead":"預覽區上方可選擇「單頁」「雙頁」「多頁」，方便檢查整期內容。",
  "man.s7.points":["單頁：100% 大小，適合細看文字。", "雙頁：兩頁並排；多頁：全部頁面縮成小圖。", "點任一頁就切換到編輯那一頁；按兩下回到單頁。"],
  "man.s8.title":"匯出與列印",
- "man.s8.lead":"在「④ 匯出」產生 PDF、PNG，或備份成 JSON。",
+ "man.s8.lead":"在「④ 匯出」先看校對清單與預檢，再產生 A4 PDF、PNG，或微信精簡版。",
  "man.s8.points":["PDF：按「列印／另存 PDF」，紙張選 A4、縮放 100%、邊界「無」，並勾選「背景圖形」。", "PNG：可保存目前頁，或把所有頁打包成一個 ZIP 檔。", "JSON：「匯出資料 JSON」備份；換電腦時用「匯入資料 JSON」還原。", "想加更多裝飾：按「匯出到 Canva（可編輯）」，再把檔案上傳到 Canva 繼續設計。"],
  "man.s9.title":"復原、快捷鍵與儲存",
  "man.s9.lead":"做錯了不用擔心，所有操作都可以復原。",
@@ -459,7 +506,7 @@ const translations={
  "demo.normal":"1× 正常速度",
  "demo.c0":"動畫示範：從空白開始做一期電子報，一直到匯出。示範結束後會還原你原本的內容。",
  "demo.c1":"① 基本資料：輸入學校名稱、主標題、月份、年度與期數，右邊預覽會即時更新。",
- "demo.c2":"② 排版設計：點一下模板選擇整頁版面，再選欄目抬頭樣式。",
+ "demo.c2":"② 排版設計：先點校友版型 A–D，再選欄目抬頭樣式。",
  "demo.c3":"③ 內容編輯：按「＋ 新增 Part」建立欄目，選擇放置位置與英文抬頭。",
  "demo.c4":"展開文章，輸入標題與正文，就像使用文書軟體一樣。",
  "demo.c5":"按「插入圖片」，照片會出現在游標所在的位置。",
@@ -492,17 +539,32 @@ const translations={
  'contact.copy':'複製信箱','contact.copied':'已複製','contact.send':'撰寫郵件','contact.close':'關閉','contact.subject':'Newsletter 編輯器問題回報'
 },
 'ko':{
- 'app.docTitle':'우송대학교 뉴스레터 편집기','app.title':'뉴스레터 편집기','app.subtitle':'여러 페이지 A4 캠퍼스 뉴스레터 · 기사별 이미지 여러 장 · PDF/PNG 내보내기',
+ 'app.docTitle':'우송대학교 동문 소식 편집기','app.title':'동문 소식 편집기','app.subtitle':'여러 쪽 A4 동문 소식지 · 템플릿 A–D · PDF/PNG/위챗 요약',
  'lang.label':'인터페이스 언어','nav.label':'편집 메뉴',
  'tab.info':'기본 정보','tab.layout':'레이아웃 디자인','tab.content':'콘텐츠 편집','tab.export':'내보내기',
- 'hint.info':'학교명, 발행 호수, 로고와 하단 정보를 설정합니다. 모든 페이지에 공통으로 적용됩니다.',
- 'hint.layout':'현재 페이지에 적용할 레이아웃 11종과 섹션 제목 스타일 16종을 선택하세요. 오른쪽에서 바로 미리 볼 수 있습니다.',
+ 'hint.info':'학교명, 호수, 로고, 하단 정보를 입력합니다. 모든 페이지에 적용됩니다. 한국어판과 중국어판은 문서를 나눠 만듭니다.',
+ 'hint.layout':'먼저 동문 템플릿 A–D를 고르세요. 더 필요하면 ‘더 많은 판형’을 여세요. 섹션 제목 스타일 16종은 그대로입니다.',
  'hint.content':'‘A4 페이지 → 파트 → 기사/이미지’ 순서로 편집합니다. 기사 제목을 누르면 펼치거나 접을 수 있습니다.',
- 'hint.export':'PDF로 인쇄·저장하거나 PNG로 저장하고, JSON으로 백업하거나 불러올 수 있습니다.',
+ 'hint.export':'내보내기 전에 교정 목록과 사전 확인을 보세요. A4는 PDF/PNG/Canva, 위챗 공유는 요약본입니다. JSON으로 백업하세요.',
+ 'alumni.names':['따뜻한 이야기','현대적 연결','전문성과 성장','함께하는 미래'],
+ 'alumni.desc':['큰 이미지와 인물 이야기. 동문 재회·초상에 적합','2단 모듈. 모임·협력·네트워크에 적합','그리드 요약. 수상·연구·성과에 적합','타임라인과 이미지 교차. 캠퍼스 변화와 동행에 적합'],
+ 'part.alumniPresets':['대학 주요 소식','동문 이야기','수상·성과','행사 안내','동문 참여'],
+ 'design.alumniTitle':'동문 소식지 템플릿 A–D','design.alumniHint':'먼저 이 네 가지를 고르세요. A 따뜻한 이야기, B 현대적 연결, C 전문성과 성장, D 함께하는 미래. 입력한 내용은 유지되며 오른쪽에서 바로 보입니다.','design.moreTitle':'더 많은 판형','design.moreHint':'추가 레이아웃입니다. 정기 동문 소식지는 위의 A–D를 우선 사용하세요.','design.brandNote':'동문 소식지는 우송 남색·청록과 세리프 제목으로 고정해 매호가 같은 발행물처럼 보이게 합니다. 추가 판형은 자기 색을 유지합니다. 별도의 색 조합 도구는 없습니다.',
+ 'pair.title':'한국어판과 중국어판은 별도 문서입니다','pair.hint':'각 언어는 따로 편집하고 따로 내보낸 뒤, 같은 호끼리 맞춰 검수하세요. 클라우드 공동 편집은 없습니다. 아래 메모는 이 컴퓨터의 파일에만 남고 지면에는 나오지 않습니다.',
+ 'field.pairedNote':'짝 판본 메모 (지면 미표시)','ph.pairedNote':'예: 중국어판 2026년 11월 / 파일명 alumni-zh-2026-11',
+ 'logo.encourage':'우송대학교 로고 업로드를 권장합니다. 없으면 내보내기 전에 안내가 표시됩니다.','logo.placeholder':'로고\n업로드',
+ 'preflight.title':'내보내기 전 확인','preflight.note':'빨간 테두리는 해당 쪽이 A4를 넘는다는 뜻입니다. 분량을 줄이거나 ‘다음 쪽으로 자동 이어가기’를 사용하세요. 로고가 없어도 여기에 표시됩니다.','preflight.okTitle':'내보낼 수 있습니다','preflight.ok':'A4를 넘는 쪽이 없고, 로고가 있습니다.','preflight.warnTitle':'내보내기 전에 확인해 주세요','preflight.overflow':'{pages}쪽이 A4를 넘습니다(미리보기 빨간 테두리). PDF/PNG에서 잘릴 수 있습니다.','preflight.logo':'로고가 없습니다. 동문 소식지에는 우송대학교 로고를 넣는 것을 권장합니다.','preflight.confirm':'그래도 내보내시겠습니까?',
+ 'proof.title':'교정 체크리스트','proof.note':'체크는 이 컴퓨터의 문서(JSON 백업 포함)에만 저장됩니다. 지면에는 나오지 않고 내보내기를 막지도 않습니다.','proof.names':'성명·직함·소속을 확인함','proof.dates':'행사 날짜·장소·호수를 확인함','proof.photos':'사진 사용 허락을 받음','proof.bilingual':'한국어/중국어 짝 판본이 있으면 사실(이름·날짜·숫자)을 서로 맞춤','proof.mobile':'위챗 요약본을 열어 휴대폰에서 제목과 사진이 잘 보이는지 확인함',
+ 'export.wechat':'위챗 요약본 다운로드 (HTML)','export.wechatPreview':'요약본 미리보기','export.wechatHint':'휴대전화용 한 단 페이지입니다. 제목·짧은 본문·사진만 담아 위챗 공유에 씁니다. A4가 아닙니다. 전체본은 위의 PDF, PNG, Canva PPTX를 사용하세요.','wechat.banner':'우송대학교 동문 소식 · 모바일 요약본 (A4 정식본 아님)','wechat.footer':'위챗에서 읽기·공유용입니다. 전체 기록은 A4 PDF를 기준으로 합니다.',
+ 'sample.alumni.subtitle':'우송대학교 동문 소식 · 校友通訊','sample.alumni.issuer':'우송대학교 동문','sample.alumni.paired':'중국어 짝 판본은 별도 파일','sample.alumni.partLeft':'동문 이야기','sample.alumni.partRight':'대학 주요 소식',
+ 'sample.alumni.a1title':'오랜만이에요\n- 모교에서 다시 만난 동문','sample.alumni.a1body':'졸업 후 근황을 짧게 적어 주세요.\n이름·직함과 사진 사용 허락을 확인한 뒤 발행합니다.',
+ 'sample.alumni.a2title':'다른 언어판은 따로 만듭니다','sample.alumni.a2body':'중국어판은 별도 문서입니다.\n이름·날짜·숫자는 짝이 되는 판과 맞춥니다. 이 글은 예시입니다.',
+ 'sample.alumni.a3title':'캠퍼스 소식 한 줄','sample.alumni.a3body':'동문에게 필요한 소식만 남깁니다.\n출처와 날짜를 적어 주세요.',
+ 'sample.alumni.a4title':'동문 홈커밍 안내','sample.alumni.a4body':'- 일시: YYYY. MM. DD.\n- 장소: 우송대학교\n- 문의: 담당 부서로 바꿔 주세요',
  'status.autosave':'자동 저장 사용 중','status.saved':'자동 저장 사용 중 · {time} 저장됨','status.failed':'자동 저장에 실패했습니다. JSON으로 백업해 주세요',
- 'info.group':'학교 및 발행 정보',
- 'field.university':'학교 영문명','field.mastTitle':'메인 제목 (기본값: NEWSLETTER)','field.subtitle':'부제목 (한국어)','field.month':'발행 월','field.year':'발행 연도','field.volume':'발행 호수','field.issuer':'발행 기관','field.address':'주소 / 하단 정보','field.logo':'학교 로고 (이미지 업로드)',
- 'ph.university':'예: Woosong University','ph.mastTitle':'예: NEWSLETTER','ph.subtitle':'부제목 입력','ph.month':'발행 월 입력 (예: 11)','ph.year':'발행 연도 입력 (예: 2026)','ph.volume':'발행 호수 입력','ph.issuer':'발행 기관 입력','ph.address':'주소 또는 하단 정보 입력',
+ 'info.group':'학교 및 동문 소식 정보',
+ 'field.university':'학교 영문명','field.mastTitle':'메인 제목 (기본값: ALUMNI)','field.subtitle':'부제목 (머리글 둘째 줄)','field.month':'발행 월','field.year':'발행 연도','field.volume':'발행 호수','field.issuer':'발행 기관','field.address':'주소 / 하단 정보','field.logo':'학교 로고 (이미지 업로드)',
+ 'ph.university':'예: Woosong University','ph.mastTitle':'예: ALUMNI','ph.subtitle':'부제목 입력','ph.month':'발행 월 입력 (예: 11)','ph.year':'발행 연도 입력 (예: 2026)','ph.volume':'발행 호수 입력','ph.issuer':'발행 기관 입력','ph.address':'주소 또는 하단 정보 입력',
  'ph.partTitle':'파트 제목을 입력하세요','ph.articleTitle':'기사 제목을 입력하세요…','ph.articleBody':'본문 또는 행사 정보를 입력하세요…',
  'logo.uploaded':'로고 업로드 완료','logo.remove':'로고 삭제','logo.alt':'학교 로고 미리보기',
  'reset.button':'예시 콘텐츠로 초기화','reset.hint':'현재 모든 페이지와 내용이 삭제되고 예시 템플릿으로 돌아갑니다. 먼저 JSON으로 백업하는 것을 권장합니다.',
@@ -583,7 +645,7 @@ const translations={
  "man.s2.points":["학교명, 메인 제목, 부제목, 발행 월, 연도, 호수를 입력합니다.", "발행 기관과 주소는 모든 페이지 하단에 표시됩니다.", "‘이미지 선택’을 눌러 학교 로고를 올립니다.", "맨 아래 ‘예시 콘텐츠로 초기화’는 모든 내용을 지우므로, 먼저 JSON으로 백업하세요."],
  "man.s3.title":"레이아웃과 제목 스타일 선택",
  "man.s3.lead":"‘② 레이아웃 디자인’에서 템플릿을 클릭하면 현재 페이지에 바로 적용되고 오른쪽에서 확인할 수 있습니다.",
- "man.s3.points":["전체 페이지 레이아웃 11종: 기본 2단, 이미지 카드, 매거진, 신문형 등.", "섹션 제목 스타일 16종 (예: President’s Message 테두리).", "페이지마다 다른 레이아웃을 쓸 수 있으며, 속지는 ‘간략 머리글’로 공간을 아낄 수 있습니다.", "‘이미지가 없는 자리에 예시 이미지 표시’로 전체 느낌을 먼저 확인해 보세요."],
+ "man.s3.points":["동문 템플릿 A–D(따뜻한 이야기, 현대적 연결, 전문성과 성장, 함께하는 미래). 나머지는 ‘더 많은 판형’에 있습니다.", "섹션 제목 스타일 16종 (예: President’s Message 테두리).", "페이지마다 다른 레이아웃을 쓸 수 있으며, 속지는 ‘간략 머리글’로 공간을 아낄 수 있습니다.", "‘이미지가 없는 자리에 예시 이미지 표시’로 전체 느낌을 먼저 확인해 보세요."],
  "man.s4.title":"페이지, 파트, 기사",
  "man.s4.lead":"‘③ 콘텐츠 편집’의 구조는 A4 페이지 → 파트(섹션) → 기사입니다.",
  "man.s4.points":["‘＋ A4 페이지 추가’로 페이지를 늘리고, ‘1 / 3’ 같은 버튼으로 편집할 페이지를 고릅니다.", "‘＋ 파트 추가’로 섹션을 만들고 왼쪽 단, 오른쪽 단, 전체 너비 중에 배치합니다.", "파트 제목은 자주 쓰는 영문 제목에서 고르거나 직접 입력합니다.", "기사 제목을 누르면 편집 창이 열리며, ↑ ↓로 순서를 바꾸고 ‘삭제’로 지웁니다."],
@@ -597,7 +659,7 @@ const translations={
  "man.s7.lead":"미리보기 위쪽에서 ‘한 페이지’, ‘두 페이지’, ‘여러 페이지’를 고를 수 있습니다.",
  "man.s7.points":["한 페이지: 100% 크기로 글자를 자세히 볼 때.", "두 페이지: 두 페이지를 나란히, 여러 페이지: 모든 페이지를 작은 그림으로.", "페이지를 클릭하면 그 페이지를 편집하고, 두 번 클릭하면 한 페이지 보기로 돌아갑니다."],
  "man.s8.title":"내보내기와 인쇄",
- "man.s8.lead":"‘④ 내보내기’에서 PDF와 PNG를 만들거나 JSON으로 백업합니다.",
+ "man.s8.lead":"‘④ 내보내기’에서 교정 목록과 사전 확인을 본 뒤 A4 PDF·PNG 또는 위챗 요약본을 만듭니다.",
  "man.s8.points":["PDF: ‘인쇄 / PDF로 저장’에서 용지 A4, 배율 100%, 여백 없음, ‘배경 그래픽’을 켜 주세요.", "PNG: 현재 페이지만 저장하거나, 모든 페이지를 ZIP 파일 하나로 저장합니다.", "JSON: ‘JSON으로 백업’으로 저장하고, 다른 컴퓨터에서는 ‘JSON 불러오기’로 복원합니다.", "장식을 더하고 싶다면 ‘Canva로 내보내기 (편집 가능)’를 누른 뒤 파일을 Canva에 올려 계속 디자인하세요."],
  "man.s9.title":"실행 취소, 단축키, 저장",
  "man.s9.lead":"실수해도 괜찮습니다. 모든 작업은 되돌릴 수 있습니다.",
@@ -609,7 +671,7 @@ const translations={
  "demo.normal":"보통 속도",
  "demo.c0":"애니메이션 데모: 빈 화면에서 시작해 뉴스레터 한 호를 만들고 내보내기까지 보여 드립니다. 데모가 끝나면 원래 내용으로 돌아갑니다.",
  "demo.c1":"① 기본 정보: 학교명, 메인 제목, 발행 월, 연도, 호수를 입력하면 오른쪽 미리보기에 바로 반영됩니다.",
- "demo.c2":"② 레이아웃 디자인: 템플릿을 클릭해 전체 레이아웃을 고르고 섹션 제목 스타일을 선택합니다.",
+ "demo.c2":"② 레이아웃 디자인: 동문 템플릿 A–D를 고른 다음 섹션 제목 스타일을 선택합니다.",
  "demo.c3":"③ 콘텐츠 편집: ‘＋ 파트 추가’로 섹션을 만들고 배치 위치와 영문 제목을 고릅니다.",
  "demo.c4":"기사를 펼쳐 제목과 본문을 입력합니다. 문서 프로그램처럼 쓰면 됩니다.",
  "demo.c5":"‘이미지 넣기’를 누르면 커서 위치에 사진이 들어갑니다.",
@@ -642,17 +704,32 @@ const translations={
  'contact.copy':'이메일 복사','contact.copied':'복사 완료','contact.send':'이메일 보내기','contact.close':'닫기','contact.subject':'뉴스레터 편집기 오류 및 이용 문의'
 },
 'en':{
- 'app.docTitle':'Woosong University Newsletter Editor','app.title':'Newsletter Editor','app.subtitle':'Multi-page A4 campus newsletter · Multiple images per article · PDF/PNG export',
+ 'app.docTitle':'Woosong University Alumni Newsletter Editor','app.title':'Alumni Newsletter Editor','app.subtitle':'Multi-page A4 alumni newsletter · Templates A–D · PDF/PNG/WeChat summary',
  'lang.label':'Interface language','nav.label':'Editor sections',
  'tab.info':'Basic Information','tab.layout':'Layout & Design','tab.content':'Content Editor','tab.export':'Export',
- 'hint.info':'Set the university name, issue details, logo, and footer. These apply to every page.',
- 'hint.layout':'Choose one of 11 page layouts and 16 section heading styles for the current page. The preview updates instantly.',
+ 'hint.info':'Set the university name, issue, logo, and footer. They appear on every page. Korean and Chinese are separate documents.',
+ 'hint.layout':'Start with alumni templates A–D. Open More layouts only if you need one. All 16 heading styles are still available.',
  'hint.content':'Edit in the order A4 page → Part → Article / Image. Click an article title to expand or collapse it.',
- 'hint.export':'Print or save as PDF, save as PNG, and back up or import your work as JSON.',
+ 'hint.export':'Read the checklist and preflight before export. Use PDF/PNG/Canva for A4, and the summary for WeChat. Back up with JSON.',
+ 'alumni.names':['Warm Narrative','Modern Connection','Professional Growth','Shared Future'],
+ 'alumni.desc':['Large photo plus a personal story, for reunions and portraits','Two-column modules, for gatherings, partnerships, and networks','Grid summaries, for awards, research, and results','Timeline with image rhythm, for campus change and shared steps'],
+ 'part.alumniPresets':['Campus News','Alumni Stories','Honors and Results','Events','Alumni Participation'],
+ 'design.alumniTitle':'Alumni templates A–D','design.alumniHint':'Start here. A Warm Narrative, B Modern Connection, C Professional Growth, D Shared Future. Your text stays, and the preview updates at once.','design.moreTitle':'More layouts','design.moreHint':'Extra layouts. For a regular alumni issue, use A–D above.','design.brandNote':'Alumni issues use Woosong navy and teal with a serif masthead so each issue looks like the same publication. Extra layouts keep their own colors. There is no separate color system.',
+ 'pair.title':'Korean and Chinese are separate documents','pair.hint':'Edit and export each language on its own, then compare the same issue. There is no cloud collaboration. The note below stays in this local file and is not printed.',
+ 'field.pairedNote':'Paired-edition note (not printed)','ph.pairedNote':'e.g. Korean edition, Nov 2026 / file alumni-ko-2026-11',
+ 'logo.encourage':'Upload the Woosong University logo so every issue matches. Export warns you if it is missing.','logo.placeholder':'Upload\nlogo',
+ 'preflight.title':'Preflight','preflight.note':'A red outline means that page is past A4. Shorten it, or use Continue Overflow on Next Page. A missing logo is listed here too.','preflight.okTitle':'Ready to export','preflight.ok':'No page is past A4, and a logo is in place.','preflight.warnTitle':'Check these before you export','preflight.overflow':'Page {pages} is past A4 (red outline in the preview). PDF/PNG may crop it.','preflight.logo':'No logo yet. Alumni issues should carry the Woosong University logo.','preflight.confirm':'Export anyway?',
+ 'proof.title':'Proofreading checklist','proof.note':'Ticks stay in this local file (including the JSON backup). They are not printed and they do not block export.','proof.names':'Names, titles, and offices checked','proof.dates':'Event dates, places, and issue number checked','proof.photos':'Photo permission confirmed','proof.bilingual':'If a Korean or Chinese pair exists, facts (names, dates, numbers) match','proof.mobile':'WeChat summary checked: titles and photos read clearly on a phone',
+ 'export.wechat':'Download WeChat summary (HTML)','export.wechatPreview':'Preview summary','export.wechatHint':'A single-column phone page: titles, short text, and images for WeChat. Not A4. The full issue is still the PDF, PNG, or Canva PPTX above.','wechat.banner':'Woosong University alumni news · mobile summary (not the A4 edition)','wechat.footer':'For reading and sharing on WeChat. The full record is the A4 PDF.',
+ 'sample.alumni.subtitle':'Woosong University Alumni News · 동문 소식','sample.alumni.issuer':'Woosong University Alumni','sample.alumni.paired':'Save the paired-language edition as its own file','sample.alumni.partLeft':'Alumni Stories','sample.alumni.partRight':'Campus News',
+ 'sample.alumni.a1title':'Long time no see\n— Alumni back on campus','sample.alumni.a1body':'Write a short update from after graduation.\nCheck names, titles, and photo permission before you publish.',
+ 'sample.alumni.a2title':'The other language is a separate file','sample.alumni.a2body':'Korean and Chinese editions are different documents.\nMatch names, dates, and numbers with the paired edition. This is a sample.',
+ 'sample.alumni.a3title':'One campus update','sample.alumni.a3body':'Keep only what alumni need to know.\nAdd the source and the date.',
+ 'sample.alumni.a4title':'Alumni homecoming','sample.alumni.a4body':'- Date: YYYY. MM. DD.\n- Place: Woosong University\n- Contact: replace with the office in charge',
  'status.autosave':'Autosave enabled','status.saved':'Autosave enabled · Saved at {time}','status.failed':'Autosave failed. Please export a JSON backup',
- 'info.group':'University & Issue Details',
- 'field.university':'University name (English)','field.mastTitle':'Main title (default: NEWSLETTER)','field.subtitle':'Subtitle (Korean)','field.month':'Month','field.year':'Year','field.volume':'Issue number','field.issuer':'Publisher','field.address':'Address / Footer','field.logo':'University logo (image upload)',
- 'ph.university':'e.g. Woosong University','ph.mastTitle':'e.g. NEWSLETTER','ph.subtitle':'Enter a subtitle','ph.month':'Enter month (e.g. 11)','ph.year':'Enter year (e.g. 2026)','ph.volume':'Enter issue number','ph.issuer':'Enter publisher','ph.address':'Enter address or footer details',
+ 'info.group':'University and alumni issue',
+ 'field.university':'University name (English)','field.mastTitle':'Main title (default: ALUMNI)','field.subtitle':'Subtitle (second masthead line)','field.month':'Month','field.year':'Year','field.volume':'Issue number','field.issuer':'Publisher','field.address':'Address / Footer','field.logo':'University logo (image upload)',
+ 'ph.university':'e.g. Woosong University','ph.mastTitle':'e.g. ALUMNI','ph.subtitle':'Enter a subtitle','ph.month':'Enter month (e.g. 11)','ph.year':'Enter year (e.g. 2026)','ph.volume':'Enter issue number','ph.issuer':'Enter publisher','ph.address':'Enter address or footer details',
  'ph.partTitle':'Enter a Part heading','ph.articleTitle':'Enter article title…','ph.articleBody':'Enter body text or event details…',
  'logo.uploaded':'Logo uploaded','logo.remove':'Remove Logo','logo.alt':'University logo preview',
  'reset.button':'Reset to Sample Content','reset.hint':'This clears all pages and content and restores the sample template. Export a JSON backup first.',
@@ -733,7 +810,7 @@ const translations={
  "man.s2.points":["University name, main title, subtitle, month, year and issue number.", "Publisher and address appear in the footer of every page.", "Press “Choose Image” to upload the university logo.", "“Reset to Sample Content” at the bottom clears everything — export a JSON backup first."],
  "man.s3.title":"Choose a Layout and Heading Style",
  "man.s3.lead":"In “② Layout & Design”, click a template to apply it to the current page and see it on the right.",
- "man.s3.points":["11 page layouts: classic two-column, image cards, magazine, newspaper and more.", "16 section heading styles (e.g. the frame around “President’s Message”).", "Each page can use its own layout; inner pages can use a “Compact header” to save space.", "Tick “Show sample images in empty image slots” to preview the overall look."],
+ "man.s3.points":["Alumni templates A–D (Warm Narrative, Modern Connection, Professional Growth, Shared Future). Other layouts are under More layouts.", "16 section heading styles (e.g. the frame around “President’s Message”).", "Each page can use its own layout; inner pages can use a “Compact header” to save space.", "Tick “Show sample images in empty image slots” to preview the overall look."],
  "man.s4.title":"Pages, Parts and Articles",
  "man.s4.lead":"In “③ Content Editor” the structure is: A4 page → Part (section) → Article.",
  "man.s4.points":["“+ Add A4 Page” adds a page; buttons like “1 / 3” choose which page you edit.", "“+ Add Part” adds a section placed in the left column, right column or full width.", "Pick a Part heading from the common English list, or type your own.", "Click an article title to edit it; ↑ ↓ reorder and “Delete” removes it."],
@@ -747,7 +824,7 @@ const translations={
  "man.s7.lead":"Above the preview, choose “Single Page”, “Two Pages” or “All Pages” to check the whole issue.",
  "man.s7.points":["Single Page: 100% size for reading details.", "Two Pages: side by side; All Pages: every page as a thumbnail.", "Click a page to edit it; double-click to go back to single-page view."],
  "man.s8.title":"Export and Print",
- "man.s8.lead":"In “④ Export”, create a PDF or PNG, or back up your work as JSON.",
+ "man.s8.lead":"In “④ Export”, read the checklist and preflight, then make an A4 PDF or PNG, or a WeChat summary.",
  "man.s8.points":["PDF: press “Print / Save as PDF” and choose A4 paper, 100% scale, no margins, and turn on “Background graphics”.", "PNG: save the current page, or every page bundled into one ZIP file.", "JSON: “Export JSON Backup” saves your work; “Import JSON” restores it on another computer.", "Want more decoration? Press “Export to Canva (editable)” and upload the file to Canva to keep designing."],
  "man.s9.title":"Undo, Shortcuts and Saving",
  "man.s9.lead":"Don’t worry about mistakes — every action can be undone.",
@@ -759,7 +836,7 @@ const translations={
  "demo.normal":"1× Normal",
  "demo.c0":"Animated demo: building an issue from a blank page all the way to export. Your own content is restored when the demo ends.",
  "demo.c1":"① Basic Information: enter the university name, main title, month, year and issue number — the preview updates instantly.",
- "demo.c2":"② Layout & Design: click a template to choose the page layout, then a section heading style.",
+ "demo.c2":"② Layout & Design: pick an alumni template A–D, then a section heading style.",
  "demo.c3":"③ Content Editor: press “+ Add Part” to create a section, then choose its placement and English heading.",
  "demo.c4":"Open the article and type a title and body text, just like in a word processor.",
  "demo.c5":"Press “Insert Image” and the photo appears where the cursor is.",
@@ -797,8 +874,11 @@ const HTML_LANG={'zh-TW':'zh-Hant','ko':'ko','en':'en'};
 const STORAGE_KEY='woosong-newsletter-v1',LEGACY_BACKUP_KEY='woosong-newsletter-v1-legacy-backup',LANG_KEY='woosong-ui-language',TAB_KEY='woosong-ui-tab',WIDTH_KEY='nex-sidebar-width',DEMO_KEY='woosong-ui-demo-images';
 const TABS=['info','layout','content','export'];
 const META_FIELDS=['university','mastTitle','subtitle','month','year','volume','issuer','address'];
-const META_KEYS=[...META_FIELDS,'logo'];
+const META_KEYS=[...META_FIELDS,'logo','pairedNote'];
 const LAYOUTS=Array.from({length:11},(_,i)=>'mode'+(i+1));
+const ALUMNI_TEMPLATES=[{code:'A',mode:'mode8'},{code:'B',mode:'mode1'},{code:'C',mode:'mode2'},{code:'D',mode:'mode10'}];
+const ALUMNI_MODES=ALUMNI_TEMPLATES.map(x=>x.mode);
+const PROOF_KEYS=['names','dates','photos','bilingual','mobile'];
 const STYLES=Array.from({length:16},(_,i)=>'style'+(i+1));
 const POSITIONS=['left','right','full'];
 const HEADERS=['full','compact','none'];
@@ -828,6 +908,17 @@ function t(key,vars){
  if(s===undefined){console.warn('[i18n] missing key',currentLanguage,key);s=key}
  if(vars&&typeof s==='string')s=s.replace(/\{(\w+)\}/g,(m,k)=>vars[k]!==undefined?vars[k]:m);
  return s;
+}
+function headingPresets(){
+ const extra=t('part.alumniPresets');
+ const list=Array.isArray(extra)?extra.map(String):[];
+ return [...list,...HEADINGS.filter(h=>!list.includes(h))];
+}
+function normalizeProof(raw){
+ const src=raw&&typeof raw==='object'?raw:{};
+ const out={};
+ for(const k of PROOF_KEYS)out[k]=!!src[k];
+ return out;
 }
 const $=sel=>document.querySelector(sel);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -880,7 +971,8 @@ function normalizeData(raw){
  if(!raw||typeof raw!=='object'||Array.isArray(raw))throw new Error('invalid');
  const out={schema:2};
  for(const k of META_KEYS)out[k]=raw[k]==null?'':String(raw[k]);
- if(raw.mastTitle===undefined)out.mastTitle='NEWSLETTER';
+ out.proof=normalizeProof(raw.proof);
+ if(raw.mastTitle===undefined)out.mastTitle='ALUMNI';
  if(raw.schema===2){
   if(!Array.isArray(raw.pages))throw new Error('invalid');
   out.pages=raw.pages.map(p=>normalizePage(p,false));
@@ -894,16 +986,14 @@ function normalizeData(raw){
 }
 function sample(){
  const art=(title,body,tag)=>({title,body,sampleTag:tag});
- return normalizeData({schema:2,university:'Woosong University',subtitle:'우송대학교 취업지원센터 뉴스레터',month:'11',year:'2026',volume:'127',mastTitle:'NEWSLETTER',issuer:'우송대학교 취업지원센터',address:'대전광역시 동구 동대전로 171',logo:'',
+ return normalizeData({schema:2,university:'Woosong University',subtitle:t('sample.alumni.subtitle'),month:'11',year:'2026',volume:'1',mastTitle:'ALUMNI',issuer:t('sample.alumni.issuer'),address:'대전광역시 동구 동대전로 171',logo:'',pairedNote:t('sample.alumni.paired'),
   pages:[{layout:'mode1',headingStyle:'style1',parts:[
-   {title:"President's Message",position:'left',articles:[
-    art('AI 리터러시가 채용 시장을 바꾼다\n- AI 활용을 넘어 협업하는 능력까지!','AI 도구를 이해하고 결과를 비판적으로 검토하는 역량이 중요해지고 있습니다.\n실제 취업 정보와 출처를 확인하여 작성해 주세요.','article'),
-    art('AI 시대, 신입사원에게 필요한 진짜 실무 역량','AI가 생성한 결과의 오류를 확인하고 업무 목적에 맞게 수정하는 능력이 필요합니다.','article'),
-    art('경력이 없어 고민이라면? 실무 경험으로 시작하자!','프로그램 일정과 참여 방법을 확인한 뒤 게시해 주세요.','article')]},
-   {title:'Woosong Global News',position:'right',articles:[
-    art('2026년 커리어비전 캠프(2학년)\n- 나의 커리어 설계 2학년부터 시작!','- 신청기간: YYYY. MM. DD. ~ MM. DD.\n- 진행일자: YYYY. MM. DD.\n- 진행장소: 교내 강의장\n- 문의사항: 담당 부서 확인','event'),
-    art('2026년 취업박람회\n- 전공에서 찾은 꿈, 취업으로 달리다!','- 진행일자: YYYY. MM. DD.\n- 진행내용: 채용 상담 및 현장 면접\n- 문의사항: 담당 부서 확인','event'),
-    art('2026년 취업역량 강화 캠프(3학년)','- 신청기간: YYYY. MM. DD.\n- 교육내용: 자기소개서 및 면접 준비\n- 문의사항: 담당 부서 확인','event')]}
+   {title:t('sample.alumni.partLeft'),position:'left',articles:[
+    art(t('sample.alumni.a1title'),t('sample.alumni.a1body'),'article'),
+    art(t('sample.alumni.a2title'),t('sample.alumni.a2body'),'article')]},
+   {title:t('sample.alumni.partRight'),position:'right',articles:[
+    art(t('sample.alumni.a3title'),t('sample.alumni.a3body'),'article'),
+    art(t('sample.alumni.a4title'),t('sample.alumni.a4body'),'event')]}
   ]}]});
 }
 function loadData(){
@@ -1028,8 +1118,10 @@ function fileControl(kind,multiple,state){
  return `<label class="nex-file-control"><input type="file" accept="image/*"${multiple?' multiple':''} data-upload="${kind}"><span>${esc(t(multiple?'file.chooseMulti':'file.choose'))}</span><small>${esc(state||t('file.none'))}</small></label>`;
 }
 function renderInfo(){
- $('#metadata').innerHTML=META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}"></div>`).join('')+
- `<div class="field"><label>${esc(t('field.logo'))}</label>${fileControl('logo',false,data.logo?t('logo.uploaded'):'')}${data.logo?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(data.logo)}" alt="${esc(t('logo.alt'))}"><div class="main-photo-details"><strong>${esc(t('logo.uploaded'))}</strong><button type="button" class="btn warning small" data-act="logo-remove">${esc(t('logo.remove'))}</button></div></div>`:''}</div>`;
+ $('#metadata').innerHTML=META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k]||'')}" placeholder="${esc(t('ph.'+k))}"></div>`).join('')+
+ `<div class="bilingual-note"><strong>${esc(t('pair.title'))}</strong><p>${esc(t('pair.hint'))}</p></div>`+
+ `<div class="field"><label for="meta-pairedNote">${esc(t('field.pairedNote'))}</label><input id="meta-pairedNote" type="text" data-meta="pairedNote" value="${esc(data.pairedNote||'')}" placeholder="${esc(t('ph.pairedNote'))}"></div>`+
+ `<div class="field"><label>${esc(t('field.logo'))}</label><p class="tiny">${esc(t('logo.encourage'))}</p>${fileControl('logo',false,data.logo?t('logo.uploaded'):'')}${data.logo?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(data.logo)}" alt="${esc(t('logo.alt'))}"><div class="main-photo-details"><strong>${esc(t('logo.uploaded'))}</strong><button type="button" class="btn warning small" data-act="logo-remove">${esc(t('logo.remove'))}</button></div></div>`:''}</div>`;
 }
 function pageButtonsHTML(){
  return `<div class="nex-pages-row">${data.pages.map((p,i)=>`<button type="button" class="nex-page-btn" data-act="page-select" data-page="${i}" aria-current="${i===pageIndex?'page':'false'}" title="${esc(t('pages.goTo',{n:i+1}))}">${i+1} / ${data.pages.length}</button>`).join('')}</div>`;
@@ -1038,14 +1130,23 @@ function illustration(seed){
  const c=THUMB_COLORS[seed%THUMB_COLORS.length];
  return `<svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="360" height="150" fill="${c[1]}"/><circle cx="288" cy="31" r="23" fill="#ffffffa0"/><path d="M0 117 L85 58 147 111 228 44 360 132 360 150H0Z" fill="${c[0]}" opacity=".55"/><path d="M0 143 L89 88 174 132 258 74 360 120V150H0Z" fill="${c[0]}" opacity=".58"/><path d="M22 128V48h51v80m13 0V70h48v58" fill="#ffffff74" stroke="#ffffff" stroke-width="2"/><path d="M0 149H360" stroke="#fff" stroke-width="4"/></svg>`;
 }
+function layoutCard(mode,titleHtml,pressed){
+ const i=Math.max(0,LAYOUTS.indexOf(mode)),n=i+1,c=THUMB_COLORS[i]||THUMB_COLORS[0];
+ const blocks=Array.from({length:n===2||n===6?3:2},(_,k)=>`<div class="thumb-section">${(k===0||n===3||n>=7)?'<div class="thumb-photo"></div>':''}<div class="thumb-title"></div><div class="thumb-line"></div><div class="thumb-line short"></div><div class="thumb-line"></div></div>`).join('');
+ return `<button type="button" class="template-option" data-act="layout-pick" data-mode="${mode}" aria-pressed="${pressed}"><div class="template-thumb ${mode}" style="--ink:${c[0]};--photo:${c[1]};--paper:${c[2]}"><div class="thumb-head">WOOSONG ALUMNI</div><div class="thumb-blocks">${blocks}</div></div>${titleHtml}</button>`;
+}
 function renderDesign(){
  const pg=curPage(),names=t('layouts.names'),desc=t('layouts.desc'),styleNames=t('headingStyles.names');
- const gallery=LAYOUTS.map((mode,i)=>{const n=i+1,c=THUMB_COLORS[i];
-  return `<button type="button" class="template-option" data-act="layout-pick" data-mode="${mode}" aria-pressed="${pg.layout===mode}"><div class="template-thumb ${mode}" style="--ink:${c[0]};--photo:${c[1]};--paper:${c[2]}"><div class="thumb-head">WOOSONG NEWSLETTER</div><div class="thumb-blocks">${Array.from({length:n===2||n===6?3:2},(_,k)=>`<div class="thumb-section">${(k===0||n===3||n>=7)?'<div class="thumb-photo"></div>':''}<div class="thumb-title"></div><div class="thumb-line"></div><div class="thumb-line short"></div><div class="thumb-line"></div></div>`).join('')}</div></div><strong>${String(n).padStart(2,'0')} · ${esc(names[i])}</strong><small>${esc(desc[i])}</small></button>`}).join('');
+ const an=t('alumni.names'),ad=t('alumni.desc');
+ const nameList=Array.isArray(an)?an:[],descList=Array.isArray(ad)?ad:[];
+ const alumni=ALUMNI_TEMPLATES.map((tpl,i)=>layoutCard(tpl.mode,`<strong><span class="tpl-code" aria-hidden="true">${tpl.code}</span> ${esc(nameList[i]||tpl.code)}</strong><small>${esc(descList[i]||'')}</small>`,pg.layout===tpl.mode)).join('');
+ const more=LAYOUTS.filter(m=>!ALUMNI_MODES.includes(m)).map(mode=>{const i=LAYOUTS.indexOf(mode);return layoutCard(mode,`<strong>${String(i+1).padStart(2,'0')} · ${esc(names[i]||'')}</strong><small>${esc(desc[i]||'')}</small>`,pg.layout===mode)}).join('');
  const picks=STYLES.map((s,i)=>`<button type="button" class="pick${pg.headingStyle===s?' active':''}" data-act="heading-pick" data-style="${s}" aria-pressed="${pg.headingStyle===s}"><span>${String(i+1).padStart(2,'0')} ${esc(styleNames[i])}</span><span class="mini-heading-preview style${i+1}">${esc(t('design.headingSample'))}</span></button>`).join('');
  $('#styleEdit').innerHTML=`<div class="design-scope"><span>${esc(t('design.pageScope'))}</span>${pageButtonsHTML()}</div>
 <div class="field header-field"><label for="pageHeader">${esc(t('design.headerTitle'))}</label><select id="pageHeader" data-page-header>${HEADERS.map(h=>opt(h,t('header.'+h),pg.header===h)).join('')}</select><p class="tiny">${esc(t('design.headerHint'))}</p></div>
-<details class="design-accordion" data-fold="design:layout"${fold('design:layout',true)?' open':''}><summary>${esc(t('design.layoutTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.layoutHint'))}</p><section class="template-gallery-container"><label class="demo-toggle"><input type="checkbox" data-demo-toggle${showDemo?' checked':''}> ${esc(t('design.demoToggle'))}</label><div class="template-gallery">${gallery}</div></section></div></details>
+<details class="design-accordion" data-fold="design:layout"${fold('design:layout',true)?' open':''}><summary>${esc(t('design.alumniTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.alumniHint'))}</p><p class="brand-note">${esc(t('design.brandNote'))}</p><section class="template-gallery-container"><label class="demo-toggle"><input type="checkbox" data-demo-toggle${showDemo?' checked':''}> ${esc(t('design.demoToggle'))}</label><div class="template-gallery alumni">${alumni}</div>
+<details class="design-accordion" data-fold="design:more"${fold('design:more',!ALUMNI_MODES.includes(pg.layout))?' open':''}><summary>${esc(t('design.moreTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.moreHint'))}</p><div class="template-gallery">${more}</div></div></details>
+</section></div></details>
 <details class="design-accordion" data-fold="design:heading"${fold('design:heading',true)?' open':''}><summary>${esc(t('design.headingTitle'))}</summary><div class="design-inner"><p class="design-caption">${esc(t('design.headingHint'))}</p><div class="style-picks">${picks}</div><p class="tiny">${esc(t('design.partNote'))}</p></div></details>`;
 }
 /* ===== Body editor (what you see is what you get) =====
@@ -1151,7 +1252,7 @@ function partHTML(part,i,count){
 <div class="minirow"><button type="button" class="btn secondary small" data-act="part-up" title="${esc(t('common.moveUp'))}" aria-label="${esc(t('common.moveUp'))}"${i===0?' disabled':''}>↑</button><button type="button" class="btn secondary small" data-act="part-down" title="${esc(t('common.moveDown'))}" aria-label="${esc(t('common.moveDown'))}"${i===count-1?' disabled':''}>↓</button><button type="button" class="btn warning small" data-act="part-del">${esc(t('common.delete'))}</button></div></div>
 <div class="nex-part-body"${open?'':' hidden'}><div class="part-grid">
 <div class="field"><label for="${id}-pos">${esc(t('part.position'))}</label><select id="${id}-pos" data-part-field="position">${POSITIONS.map(v=>opt(v,t('pos.'+v),part.position===v)).join('')}</select></div>${movable}</div>
-<div class="field"><label for="${id}-preset">${esc(t('part.preset'))}</label><select id="${id}-preset" data-part-field="preset">${opt('',t('part.presetPlaceholder'),!HEADINGS.includes(part.title))}${HEADINGS.map(h=>opt(h,h,part.title===h)).join('')}</select></div>
+<div class="field"><label for="${id}-preset">${esc(t('part.preset'))}</label><select id="${id}-preset" data-part-field="preset">${opt('',t('part.presetPlaceholder'),!headingPresets().includes(part.title))}${headingPresets().map(h=>opt(h,h,part.title===h)).join('')}</select></div>
 <div class="field"><label for="${id}-title">${esc(t('part.customTitle'))}</label><input id="${id}-title" type="text" data-part-field="title" value="${esc(part.title)}" placeholder="${esc(t('ph.partTitle'))}"></div>
 <div class="part-articles">${part.articles.length?part.articles.map((a,j)=>articleHTML(part,a,j,part.articles.length)).join(''):`<p class="photo-empty">${esc(t('part.empty'))}</p>`}</div>
 <button type="button" class="btn secondary small" data-act="art-add">${esc(t('part.addArticle'))}</button></div></section>`;
@@ -1164,7 +1265,7 @@ function renderContent(){
 }
 function renderPanels(){
  const side=$('.side'),scroll=side.scrollTop;
- renderInfo();renderDesign();renderContent();paintStatus();
+ renderInfo();renderDesign();renderContent();renderProof();paintStatus();
  side.scrollTop=scroll;
 }
 function applySearch(){
@@ -1219,7 +1320,7 @@ function bodyInner(a,text){
 function mastHTML(pg){
  if(pg.header==='none')return '';
  if(pg.header==='compact')return `<header class="mast-compact"><span class="mc-univ">${esc(data.university)}</span><span class="mc-title">${esc(data.mastTitle)}</span><span class="mc-issue">${esc(data.year)}${data.month?' · '+esc(data.month):''}${data.volume?' · vol. '+esc(data.volume):''}</span></header>`;
- const logo=data.logo?`<img src="${esc(data.logo)}" alt="${esc(t('preview.logoAlt'))}">`:'<div class="placeholder-logo">SCHOOL<br>LOGO</div>';
+ const logo=data.logo?`<img src="${esc(data.logo)}" alt="${esc(t('preview.logoAlt'))}">`:`<div class="placeholder-logo">${esc(t('logo.placeholder')).replace(/\n/g,'<br>')}</div>`;
  return `<header class="mast"><div class="schoolmark">${logo}</div><div class="mast-title"><div class="univ">${esc(data.university)}</div><div class="newsletter">${esc(data.mastTitle)}</div><div class="korean">${esc(data.subtitle)}</div></div><div class="issue"><div><span class="month">${esc(data.month)}</span> <span class="year">${esc(data.year)}</span></div><div class="vol">vol. ${esc(data.volume)}</div></div></header>`;
 }
 function card(a,pos,seed){
@@ -1275,6 +1376,30 @@ function checkOverflow(){
 function paintOverflow(){
  const w=$('#overflowWarning');if(!w)return;
  w.hidden=!overflowPages.length;$('#overflowText').textContent=overflowPages.length?t('pages.overflow',{pages:overflowPages.join(', ')}):'';
+ renderPreflight();
+}
+function preflightIssues(){
+ const issues=[];
+ if(overflowPages.length)issues.push(t('preflight.overflow',{pages:overflowPages.join(', ')}));
+ if(!data.logo)issues.push(t('preflight.logo'));
+ return issues;
+}
+function renderPreflight(){
+ const box=$('#preflight');if(!box)return;
+ const issues=preflightIssues();
+ if(!issues.length){box.className='preflight ok';box.innerHTML=`<strong>${esc(t('preflight.okTitle'))}</strong><p>${esc(t('preflight.ok'))}</p>`;return}
+ box.className='preflight warn';
+ box.innerHTML=`<strong>${esc(t('preflight.warnTitle'))}</strong><ul>${issues.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+}
+function confirmExport(){
+ const issues=preflightIssues();
+ if(!issues.length)return Promise.resolve(true);
+ return uiConfirm(issues.join('\n\n')+'\n\n'+t('preflight.confirm'));
+}
+function renderProof(){
+ const ul=$('#proofList');if(!ul)return;
+ data.proof=normalizeProof(data.proof);
+ ul.innerHTML=PROOF_KEYS.map(k=>`<li><label><input type="checkbox" data-proof="${k}"${data.proof[k]?' checked':''}> <span>${esc(t('proof.'+k))}</span></label></li>`).join('');
 }
 
 /* ===== Actions ===== */
@@ -1550,12 +1675,14 @@ function onAction(btn){
   case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(['flow.moved',{n:pageIndex+2}])}return;
   case 'art-unflow':if(a){delete a.continuesNext;delete a.continuedFrom;delete a.contJoin;structural()}return;
   case 'view':return setPreviewView(btn.dataset.view);
-  case 'export-pdf':saveNow();return window.print();
-  case 'export-png':return savePNG(btn);
-  case 'export-png-all':return savePNGAll(btn);
-  case 'export-canva':return saveCanva(btn);
+  case 'export-pdf':saveNow();confirmExport().then(ok=>{if(ok)window.print()});return;
+  case 'export-png':return confirmExport().then(ok=>{if(ok)savePNG(btn)});
+  case 'export-png-all':return confirmExport().then(ok=>{if(ok)savePNGAll(btn)});
+  case 'export-canva':return confirmExport().then(ok=>{if(ok)saveCanva(btn)});
   case 'export-json':return saveJSON();
   case 'export-import':return $('#importFile').click();
+  case 'export-wechat':return confirmExport().then(ok=>{if(ok)saveWeChat()});
+  case 'export-wechat-preview':return confirmExport().then(ok=>{if(ok)previewWeChat()});
   case 'contact-open':return openContact();
   case 'contact-close':return closeContact();
   case 'contact-copy':return copyEmail(btn);
@@ -1577,7 +1704,7 @@ document.addEventListener('input',e=>{
  if(el.dataset.partField==='title'){
   const part=findPart(pid);if(!part)return;part.title=el.value;
   const card=el.closest('.part-card');card.querySelector('.part-head-title').textContent=el.value||t('sample.newPart');
-  const preset=card.querySelector('[data-part-field="preset"]');if(preset)preset.value=HEADINGS.includes(el.value)?el.value:'';
+  const preset=card.querySelector('[data-part-field="preset"]');if(preset)preset.value=headingPresets().includes(el.value)?el.value:'';
   persist();schedulePreview();return;
  }
  if(el.matches('.ce-editor')){onEditorInput(el);return}
@@ -1598,6 +1725,7 @@ document.addEventListener('input',e=>{
 document.addEventListener('change',e=>{
  const el=e.target;flushHistory();
  if(el.id==='importFile')return importJSON(el);
+ if(el.dataset&&PROOF_KEYS.includes(el.dataset.proof)){data.proof=normalizeProof(data.proof);data.proof[el.dataset.proof]=!!el.checked;persist();return}
  if(!el.closest('.side'))return;
  if(el.matches('input[type=file][data-upload]'))return handleUpload(el);
  if(el.matches('[data-page-header]')&&HEADERS.includes(el.value)){curPage().header=el.value;persist();renderCurrentSheet();return}
@@ -1776,6 +1904,69 @@ async function autoFlow(){
  await decodeImages($('#pagesStack'));checkOverflow();
 }
 
+
+function plainText(s){
+ return String(s||'').replace(/\*\*(.+?)\*\*/g,'$1').replace(IMG_TOKEN,'').replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+function shortBody(s){
+ const full=plainText(s);
+ const lines=full.split('\n').map(x=>x.trim()).filter(Boolean);
+ let text=lines.slice(0,3).join('\n'),cut=lines.length>3;
+ if(text.length>240){text=text.slice(0,240).replace(/\s+\S*$/,'');cut=true}
+ if(cut)text=text.replace(/[.…\s]+$/,'')+'…';
+ return text;
+}
+function wechatDocument(){
+ const lang=HTML_LANG[currentLanguage]||'en',blocks=[];
+ for(const pg of data.pages){
+  for(const part of pg.parts){
+   if(!part.articles.length)continue;
+   blocks.push(`<h2 class="part">${esc(part.title||t('sample.newPart'))}</h2>`);
+   for(const a of part.articles){
+    const title=plainText(a.title).split('\n').map(x=>x.trim()).filter(Boolean).join(' ')||t('sample.newTitle');
+    const imgs=[];
+    if(a.image)imgs.push(a.image);
+    for(const im of a.extraImages||[])if(im&&im.src)imgs.push(im.src);
+    const pics=imgs.slice(0,4).map(src=>`<img src="${src}" alt="">`).join('');
+    const body=shortBody(a.body);
+    blocks.push(`<article><h3>${esc(title)}</h3>${pics}${body?`<p>${esc(body)}</p>`:''}</article>`);
+   }
+  }
+ }
+ const logo=data.logo?`<img class="logo" src="${data.logo}" alt="">`:'';
+ const issue=[data.year,data.month,data.volume?('Vol. '+data.volume):''].filter(Boolean).join(' · ');
+ return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc((data.university||'')+' '+(data.mastTitle||''))}</title><style>
+body{margin:0;background:#eef3f2;color:#122742;font-family:"Noto Sans KR","Malgun Gothic","Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
+.wrap{max-width:480px;margin:0 auto;background:#fff;padding:20px 16px 40px}
+header{text-align:center;border-top:5px solid #122742;border-bottom:3px solid #0a7c88;padding:14px 0 12px}
+.logo{height:58px;width:auto;object-fit:contain}
+.univ{font-size:13px;letter-spacing:.04em;margin-top:8px;font-weight:700}
+h1{font-family:Georgia,"Noto Serif KR","Noto Serif TC",serif;font-size:28px;line-height:1.15;margin:4px 0}
+.sub,.issue{font-size:13px;color:#3d5a66}
+.banner{background:#e7f4f5;color:#0a6470;font-size:13px;line-height:1.55;padding:10px 12px;border-radius:8px;margin:14px 0}
+h2.part{font-size:14px;margin:20px 0 0;color:#0a7c88}
+article{padding:12px 0 14px;border-bottom:1px solid #e4ecee}
+article h3{font-size:18px;line-height:1.45;margin:0 0 8px}
+article img{width:100%;border-radius:8px;margin:8px 0;display:block}
+article p{font-size:16px;line-height:1.7;white-space:pre-line;margin:6px 0 0}
+footer{font-size:12px;color:#5c7084;margin-top:18px;line-height:1.65}
+</style></head><body><main class="wrap"><header>${logo}<div class="univ">${esc(data.university)}</div><h1>${esc(data.mastTitle)}</h1><div class="sub">${esc(data.subtitle)}</div><div class="issue">${esc(issue)}</div></header><p class="banner">${esc(t('wechat.banner'))}</p>${blocks.join('')||`<p>${esc(t('preview.emptyPage'))}</p>`}<footer><strong>${esc(data.issuer)}</strong><br>${esc(data.address)}<br>${esc(t('wechat.footer'))}</footer></main></body></html>`;
+}
+function downloadText(name,text,type){
+ const blob=new Blob([text],{type}),url=URL.createObjectURL(blob),link=document.createElement('a');
+ link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+function saveWeChat(){
+ saveNow();
+ downloadText(`woosong-alumni-wechat-${data.year||'year'}-${data.month||'month'}.html`,wechatDocument(),'text/html;charset=utf-8');
+}
+function previewWeChat(){
+ const html=wechatDocument(),blob=new Blob([html],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob);
+ const w=window.open(url,'_blank','noopener');
+ if(!w)downloadText(`woosong-alumni-wechat-${data.year||'year'}-${data.month||'month'}.html`,html,'text/html;charset=utf-8');
+ setTimeout(()=>URL.revokeObjectURL(url),120000);
+}
 /* ===== Export ===== */
 function saveJSON(){
  saveNow();
@@ -2228,7 +2419,7 @@ function demoImage(kind){
   if(!kind){x.fillStyle='#ffffff';x.beginPath();x.moveTo(170,120);x.lineTo(420,150);x.lineTo(170,180);x.closePath();x.fill();x.fillRect(240,95,40,110)}
   c.toBlob(b=>res(new File([b],kind?'campus.png':'airport.png',{type:'image/png'})),'image/png')});
 }
-function blankIssue(){return {schema:2,university:'',mastTitle:'',subtitle:'',month:'',year:'',volume:'',issuer:'',address:'',logo:'',pages:[normalizePage({layout:'mode1',headingStyle:'style1',parts:[]},false)]}}
+function blankIssue(){return {schema:2,university:'Woosong University',mastTitle:'ALUMNI',subtitle:'',month:'',year:'',volume:'',issuer:'',address:'',logo:'',pairedNote:'',proof:normalizeProof(),pages:[normalizePage({layout:'mode1',headingStyle:'style1',parts:[]},false)]}}
 async function demoScript(){
  const art=()=>findArticleById(document.querySelector('#partsEdit .part-card:last-of-type .article-item')?.dataset.aid);
  await caption('demo.c0',null,2600);
@@ -2238,7 +2429,7 @@ async function demoScript(){
  await dsleep(500);
  // ② layout & design
  await tap(await demoFind('.ux-tab[data-tab="layout"]'));await caption('demo.c2',null,600);
- await tap(await demoFind('[data-act="layout-pick"][data-mode="mode4"]'));await dsleep(400);
+ await tap(await demoFind('[data-act="layout-pick"][data-mode="mode8"]'));await dsleep(400);
  await tap(await demoFind('[data-act="heading-pick"][data-style="style6"]'));await dsleep(500);
  // ③ content: Part 1 + article with images and bold text
  await tap(await demoFind('.ux-tab[data-tab="content"]'));await caption('demo.c3',null,600);
@@ -2320,6 +2511,6 @@ async function runDemo(opts={}){
 applyTranslations();renderPanels();renderPreview();showTab(activeTab);recordHistory();
 try{if(localStorage.getItem(MANUAL_KEY)!=='1')openManual(0,true)}catch(e){}
 ensureImageSizes().then(n=>{if(n){persist();renderPreview()}});
-window.NewsletterEditor={saveCanva,runDemo,get demoActive(){return demoActive},openManual,closeManual,ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow};
+window.NewsletterEditor={saveCanva,runDemo,get demoActive(){return demoActive},openManual,closeManual,ensureImageSizes,autoFlow,get data(){return data},get currentLanguage(){return currentLanguage},get pageIndex(){return pageIndex},translations,t,setLanguage,showTab,saveNow,wechatDocument,preflightIssues};
 })();
 </script></body></html>
