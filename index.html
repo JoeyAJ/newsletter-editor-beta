@@ -230,6 +230,7 @@ input[type=range]{accent-color:#245883}
 .ux-statusbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.ux-statusbar .ux-status{padding-top:7px}
 .ux-actions{display:flex;gap:5px;padding-top:6px}.ux-act{border:1px solid #d3deea;background:#fff;color:#23415f;border-radius:7px;padding:5px 9px;font-size:11px;font-weight:700;cursor:pointer}.ux-act:disabled{opacity:.4;cursor:default}.ux-act:not(:disabled):hover{border-color:#3d7fc0;background:#eef6ff}
 .ux-status.is-flash{color:#1f6a43;font-weight:700}
+.issue-lang{display:flex;gap:6px;flex-wrap:wrap}
 /* WYSIWYG body editor */
 .ce-field>label{display:block;font-size:12px;font-weight:700;color:#4c5968;margin:0 0 5px}
 .ce-toolbar{display:flex;gap:6px;flex-wrap:wrap;padding:6px;border:1px solid #ccd5df;border-bottom:0;border-radius:6px 6px 0 0;background:#f4f7fb}
@@ -899,7 +900,7 @@ const translations={
  'ds.s1':'整份期刊模板','ds.s1d':'先選篇幅，一次排好所有頁面','ds.s2':'這一頁的版面','ds.s2d':'點選頁面縮圖，再設定頁首與版型','ds.layout':'版型','ds.groupPaper':'校友報風格','ds.groupClassic':'經典版型','ds.applyAll':'把這一頁的版型與抬頭樣式套用到全部頁面','ds.current':'目前套用','ds.change':'更換模板','ds.all':'全部','ds.keep':'維持「{name}」',
  'art.tabText':'文字','art.tabImg':'圖片','art.tabType':'字型','art.del':'刪除這篇文章',
  'blk.title':'版塊標題（可直接輸入或從建議中選）','blk.count':'文章數','blk.del':'刪除這個版塊','blk.clickHint':'小技巧：在右側預覽直接點一篇文章，就會在這裡打開它。','blk.pick':'選擇要新增的版塊樣式：','blk.settings':'版塊設定（標題・位置・樣式）','ds.moreLayouts':'更多經典版型（{n} 款）','ds.moreStyles':'更多抬頭樣式（{n} 款）','ds.headingPaper':'校友報版型選第 1 款時，會使用報紙專用的深紅標籤；選其他款則改用該樣式。','mast.artTitle':'刊頭插畫（所有頁面共用）','mast.artHint':'4 款線稿參考又松大學代表建築的公開照片簡化繪製：W7 又松館、W13 又松塔、SolBridge、W19 Endicott 大樓（示意，非建築圖面）。也可以上傳自己的圖片（建議用去背 PNG 線稿）。','mast.styleTitle':'刊頭版式','mast.art.w7':'W7 又松館','mast.art.w13':'W13 又松塔','mast.art.solbridge':'SolBridge','mast.art.w19':'W19 Endicott 大樓','mast.art.hall':'校園主樓','mast.art.tower':'國際高樓','mast.art.gate':'校門林道','mast.art.skyline':'校園天際線','mast.art.logo':'使用 Logo','mast.art.custom':'自訂圖片','mast.art.none':'不放插畫','mast.style.classic':'插畫在左','mast.style.right':'插畫在右','mast.style.minimal':'極簡','draft.group':'草稿','draft.hint':'把目前的整份期刊另存成一份草稿，之後可以隨時開回來繼續編輯。草稿存在這台電腦的這個瀏覽器裡；要換電腦，請用下方的「匯出資料 JSON」。','draft.nameLabel':'草稿名稱','draft.save':'保存草稿','draft.untitled':'未命名草稿','draft.pages':'{n} 頁','draft.open':'開啟','draft.del':'刪除','draft.empty':'還沒有保存任何草稿。','draft.saved':'已保存草稿「{name}」。','draft.opened':'已開啟草稿「{name}」。要回到開啟前的內容，可以按「復原」。','draft.failed':'草稿無法保存或讀取，請改用「匯出資料 JSON」備份。','draft.unavailable':'這個瀏覽器不支援草稿功能（例如無痕模式），請改用「匯出資料 JSON」。','draft.overwrite':'已經有名為「{name}」的草稿，要用目前內容覆蓋它嗎？','draft.confirmOpen':'開啟草稿「{name}」會取代編輯器目前的內容（可以按「復原」回來）。確定開啟？','draft.confirmDel':'確定刪除這份草稿？刪除後無法復原。',
- 'meta.auto':'隨介面語言自動切換','meta.custom':'已自訂，切換語言時不會改變','meta.reset':'恢復預設',
+ 'meta.auto':'自動跟隨期刊語言（韓文期刊顯示韓文，中文期刊顯示簡體）','issueLang.label':'期刊語言','issueLang.ko':'韓文','issueLang.zh-CN':'簡體中文','issueLang.hint':'期刊本身用什麼語言寫。頁面上的固定文字（發行單位、地址、接下頁等）和匯出檔名（KR／CN）會跟著改。中文期刊一律使用簡體。','meta.custom':'已自訂，切換期刊語言或介面語言時都不會改變','meta.reset':'恢復預設',
  'footer.issuer':'發行單位：{v}','footer.address':'地址：{v}',
  'cg.title':'相片拼接模板','cg.none':'不使用','cg.overlap2':'雙圖交疊','cg.pair2':'雙圖並排','cg.stack2':'雙圖上下','cg.stair3':'三圖階梯','cg.hero4':'主圖＋三小圖','cg.grid4':'四宮格',
  'cg.tilt':'相片微傾斜（相片風）','cg.slots':'此模板需要 {n} 張相片，目前 {m} 張','cg.slot':'第 {n} 格','cg.hint':'選好模板後，用上方「選擇圖片」上傳相片，會依序填入各格；用 ↑↓ 調整順序、「更換」換相片、焦點滑桿調整顯示位置。已插入內文的圖片不會進入拼接。',
@@ -1078,7 +1079,7 @@ const translations={
  'ds.s1':'호 전체 템플릿','ds.s1d':'페이지 수를 고르면 모든 페이지가 한 번에 배치됩니다','ds.s2':'이 페이지의 레이아웃','ds.s2d':'페이지 미리보기를 고른 뒤 상단과 레이아웃을 정하세요','ds.layout':'레이아웃','ds.groupPaper':'동문보 스타일','ds.groupClassic':'기본 레이아웃','ds.applyAll':'이 페이지의 레이아웃과 제목 스타일을 모든 페이지에 적용','ds.current':'현재 적용','ds.change':'템플릿 변경','ds.all':'전체','ds.keep':'「{name}」 유지',
  'art.tabText':'텍스트','art.tabImg':'이미지','art.tabType':'글꼴','art.del':'이 기사 삭제',
  'blk.title':'블록 제목 (직접 입력하거나 추천에서 선택)','blk.count':'기사 수','blk.del':'이 블록 삭제','blk.clickHint':'팁: 오른쪽 미리보기에서 기사를 클릭하면 여기에서 바로 열립니다.','blk.pick':'추가할 블록 스타일을 고르세요:','blk.settings':'블록 설정 (제목 · 위치 · 스타일)','ds.moreLayouts':'기본 레이아웃 더 보기 ({n}종)','ds.moreStyles':'제목 스타일 더 보기 ({n}종)','ds.headingPaper':'동문보 레이아웃에서 1번을 고르면 신문 전용 붉은 라벨이 쓰이고, 다른 스타일을 고르면 그 스타일로 바뀝니다.','mast.artTitle':'제호 일러스트 (모든 페이지 공통)','mast.artHint':'선화 4종은 우송대학교 대표 건물의 공개 사진을 참고해 단순하게 그린 것입니다: W7 우송관, W13 우송타워, 솔브릿지, W19 엔디컷빌딩(예시 일러스트이며 건축 도면이 아닙니다). 직접 이미지를 올릴 수도 있습니다 (배경이 투명한 PNG 선화 권장).','mast.styleTitle':'제호 배치','mast.art.w7':'W7 우송관','mast.art.w13':'W13 우송타워','mast.art.solbridge':'솔브릿지','mast.art.w19':'W19 엔디컷빌딩','mast.art.hall':'캠퍼스 본관','mast.art.tower':'국제 고층 건물','mast.art.gate':'정문과 숲길','mast.art.skyline':'캠퍼스 스카이라인','mast.art.logo':'로고 사용','mast.art.custom':'직접 올리기','mast.art.none':'일러스트 없음','mast.style.classic':'일러스트 왼쪽','mast.style.right':'일러스트 오른쪽','mast.style.minimal':'미니멀','draft.group':'임시 저장','draft.hint':'현재 호 전체를 임시 저장본으로 남겨 두고 언제든 다시 열어 편집할 수 있습니다. 임시 저장본은 이 컴퓨터의 이 브라우저에 보관되며, 다른 컴퓨터로 옮기려면 아래 ‘JSON으로 백업’을 사용하세요.','draft.nameLabel':'임시 저장 이름','draft.save':'임시 저장','draft.untitled':'이름 없는 임시 저장','draft.pages':'{n}페이지','draft.open':'열기','draft.del':'삭제','draft.empty':'아직 임시 저장본이 없습니다.','draft.saved':'「{name}」을(를) 임시 저장했습니다.','draft.opened':'「{name}」을(를) 열었습니다. 열기 전 내용으로 돌아가려면 ‘실행 취소’를 누르세요.','draft.failed':'임시 저장본을 저장하거나 읽을 수 없습니다. ‘JSON으로 백업’을 사용하세요.','draft.unavailable':'이 브라우저에서는 임시 저장을 사용할 수 없습니다(예: 시크릿 모드). ‘JSON으로 백업’을 사용하세요.','draft.overwrite':'「{name}」 이름의 임시 저장본이 이미 있습니다. 현재 내용으로 덮어쓸까요?','draft.confirmOpen':'「{name}」을(를) 열면 편집기의 현재 내용이 바뀝니다(‘실행 취소’로 되돌릴 수 있음). 열까요?','draft.confirmDel':'이 임시 저장본을 삭제할까요? 삭제하면 되돌릴 수 없습니다.',
- 'meta.auto':'인터페이스 언어에 따라 자동 전환','meta.custom':'직접 입력함 · 언어를 바꿔도 유지됩니다','meta.reset':'기본값으로',
+ 'meta.auto':'소식지 언어에 따라 자동 표시 (한국어 소식지는 한국어, 중국어 소식지는 간체)','issueLang.label':'소식지 언어','issueLang.ko':'한국어','issueLang.zh-CN':'중국어 (간체)','issueLang.hint':'소식지 본문의 언어입니다. 페이지의 고정 문구(발행 기관, 주소, 다음 페이지에 계속 등)와 내보내는 파일 이름(KR / CN)이 이에 맞춰 바뀝니다. 중국어 소식지는 항상 간체를 사용합니다.','meta.custom':'직접 입력함 · 소식지 언어나 화면 언어를 바꿔도 유지됩니다','meta.reset':'기본값으로',
  'footer.issuer':'발행 기관: {v}','footer.address':'주소: {v}',
  'cg.title':'사진 콜라주 템플릿','cg.none':'사용 안 함','cg.overlap2':'두 장 겹치기','cg.pair2':'두 장 나란히','cg.stack2':'두 장 위아래','cg.stair3':'세 장 계단식','cg.hero4':'대표 + 작은 사진 3장','cg.grid4':'4분할',
  'cg.tilt':'사진 살짝 기울이기 (포토 스타일)','cg.slots':'이 템플릿은 사진 {n}장이 필요합니다 · 현재 {m}장','cg.slot':'{n}번 칸','cg.hint':'템플릿을 고른 뒤 위의 「이미지 선택」으로 사진을 올리면 칸에 차례대로 들어갑니다. ↑↓로 순서를, 「교체」로 사진을, 초점 슬라이더로 보이는 위치를 조정하세요. 본문에 넣은 사진은 콜라주에 포함되지 않습니다.',
@@ -1257,7 +1258,7 @@ const translations={
  'ds.s1':'Whole-issue template','ds.s1d':'Pick a length and every page is laid out at once','ds.s2':'This page\'s layout','ds.s2d':'Choose a page thumbnail, then set its masthead and layout','ds.layout':'Layout','ds.groupPaper':'Alumni paper','ds.groupClassic':'Classic','ds.applyAll':'Apply this page\'s layout and heading style to all pages','ds.current':'Applied','ds.change':'Change template','ds.all':'All','ds.keep':'Keep "{name}"',
  'art.tabText':'Text','art.tabImg':'Images','art.tabType':'Typeface','art.del':'Delete this article',
  'blk.title':'Block heading (type it or pick a suggestion)','blk.count':'Articles','blk.del':'Delete this block','blk.clickHint':'Tip: click an article in the preview on the right to open it here.','blk.pick':'Choose the block style to add:','blk.settings':'Block settings (heading · placement · style)','ds.moreLayouts':'More classic layouts ({n})','ds.moreStyles':'More heading styles ({n})','ds.headingPaper':'On alumni paper layouts, style 1 uses the newspaper\'s red tag; any other style replaces it.','mast.artTitle':'Masthead illustration (all pages)','mast.artHint':'The four line drawings are simplified from public photos of Woosong landmarks: W7 Woosong Hall, W13 Woosong Tower, SolBridge and W19 Endicott Building (illustrations, not architectural drawings). You can also upload your own picture (a transparent PNG line drawing works best).','mast.styleTitle':'Masthead arrangement','mast.art.w7':'W7 Woosong Hall','mast.art.w13':'W13 Woosong Tower','mast.art.solbridge':'SolBridge','mast.art.w19':'W19 Endicott Building','mast.art.hall':'Main hall','mast.art.tower':'High-rise','mast.art.gate':'Campus gate','mast.art.skyline':'Campus skyline','mast.art.logo':'Use logo','mast.art.custom':'My picture','mast.art.none':'No illustration','mast.style.classic':'Art left','mast.style.right':'Art right','mast.style.minimal':'Minimal','draft.group':'Drafts','draft.hint':'Save the whole issue as a draft and reopen it any time to keep editing. Drafts are kept in this browser on this computer; to move to another computer, use “Export JSON Backup” below.','draft.nameLabel':'Draft name','draft.save':'Save Draft','draft.untitled':'Untitled draft','draft.pages':'{n} pages','draft.open':'Open','draft.del':'Delete','draft.empty':'No drafts saved yet.','draft.saved':'Draft “{name}” saved.','draft.opened':'Draft “{name}” opened. Press Undo to return to what you had before.','draft.failed':'The draft could not be saved or read. Please use “Export JSON Backup”.','draft.unavailable':'Drafts are not available in this browser (for example in private mode). Please use “Export JSON Backup”.','draft.overwrite':'A draft named “{name}” already exists. Replace it with the current content?','draft.confirmOpen':'Opening “{name}” replaces what is in the editor now (Undo brings it back). Open it?','draft.confirmDel':'Delete this draft? This cannot be undone.',
- 'meta.auto':'Follows the interface language','meta.custom':'Customized · kept when the language changes','meta.reset':'Use default',
+ 'meta.auto':'Follows the newsletter language (Korean issue in Korean, Chinese issue in Simplified Chinese)','issueLang.label':'Newsletter language','issueLang.ko':'Korean','issueLang.zh-CN':'Chinese (Simplified)','issueLang.hint':'The language the newsletter is written in. Fixed text on the page (publisher, address, "continued" notes) and exported file names (KR / CN) follow it. Chinese issues always use Simplified Chinese.','meta.custom':'Customized · kept when the newsletter or interface language changes','meta.reset':'Use default',
  'footer.issuer':'Publisher: {v}','footer.address':'Address: {v}',
  'cg.title':'Photo collage templates','cg.none':'None','cg.overlap2':'Two overlapping','cg.pair2':'Side by side','cg.stack2':'Stacked pair','cg.stair3':'Three-step stack','cg.hero4':'Hero + three','cg.grid4':'Four grid',
  'cg.tilt':'Slight photo tilt (snapshot style)','cg.slots':'This template takes {n} photos · {m} added','cg.slot':'Slot {n}','cg.hint':'Pick a template, then upload photos with "Choose images" above; they fill the slots in order. Use ↑↓ to reorder, "Replace" to swap a photo and the focus sliders to choose the visible area. Pictures placed in the body text are not part of the collage.',
@@ -1276,6 +1277,9 @@ const translations={
 };
 const SUPPORTED_LANGUAGES=['zh-TW','ko','en'];
 const HTML_LANG={'zh-TW':'zh-Hant','ko':'ko','en':'en'};
+/* Language the issue itself is written in (saved in the data and the JSON file). It sets the fixed text printed on
+   the page and the KR / CN tag in file names. Chinese issues are always Simplified Chinese. */
+const ISSUE_LANGS=['ko','zh-CN'];
 const STORAGE_KEY='woosong-newsletter-v1',LEGACY_BACKUP_KEY='woosong-newsletter-v1-legacy-backup',LANG_KEY='woosong-ui-language',TAB_KEY='woosong-ui-tab',WIDTH_KEY='nex-sidebar-width',DEMO_KEY='woosong-ui-demo-images';
 const TABS=['info','layout','content','export'];
 const META_FIELDS=['university','mastTitle','subtitle','month','year','volume','issuer','address'];
@@ -1316,6 +1320,14 @@ function t(key,vars){
  if(s===undefined){console.warn('[i18n] missing key',currentLanguage,key);s=key}
  if(vars&&typeof s==='string')s=s.replace(/\{(\w+)\}/g,(m,k)=>vars[k]!==undefined?vars[k]:m);
  return s;
+}
+/* Text printed on the newsletter page follows the issue language, not the interface language:
+   a Korean issue prints Korean, a Chinese issue prints Simplified Chinese. */
+const PAGE_ZH_CN={'footer.address':'地址：{v}','footer.issuer':'发行单位：{v}','preview.issueLabel':'本期焦点预告','flow.contNext':'（接下页）','flow.contPrev':'（续前页）'};
+function tp(key,vars){
+ if(data.lang!=='zh-CN'){const k=translations.ko[key];if(k!==undefined)return vars?k.replace(/\{(\w+)\}/g,(m,x)=>vars[x]!==undefined?vars[x]:m):k}
+ if(PAGE_ZH_CN[key]===undefined)return t(key,vars);
+ return vars?PAGE_ZH_CN[key].replace(/\{(\w+)\}/g,(m,k)=>vars[k]!==undefined?vars[k]:m):PAGE_ZH_CN[key];
 }
 const $=sel=>document.querySelector(sel);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1366,6 +1378,11 @@ function legacyPage(p,root){
  for(const x of Array.isArray(p.parts)?p.parts:[])parts.push(x);
  return normalizePage({layout:pick('layout'),headingStyle:pick('headingStyle'),parts},true);
 }
+/* Older files carry no language: Korean if the text has more Hangul than Chinese characters, otherwise Chinese. */
+function guessIssueLang(d){
+ const txt=JSON.stringify(d.pages,(k,v)=>typeof v==='string'&&v.length>2000?'':v);
+ return (txt.match(/[\uac00-\ud7a3]/g)||[]).length>=(txt.match(/[\u4e00-\u9fff]/g)||[]).length?'ko':'zh-CN';
+}
 function normalizeData(raw){
  if(!raw||typeof raw!=='object'||Array.isArray(raw))throw new Error('invalid');
  const out={schema:2};
@@ -1381,6 +1398,7 @@ function normalizeData(raw){
  }
  if(!out.pages.length)out.pages=[normalizePage({parts:[{title:'',position:'left'},{title:'',position:'right'}]},false)];
  out.metaAuto=normalizeMetaAuto(raw,out);
+ out.lang=ISSUE_LANGS.includes(raw.lang)?raw.lang:guessIssueLang(out);
  if(typeof raw.issueTemplate==='string')out.issueTemplate=raw.issueTemplate;
  for(const k of ['mastArt','mastStyle','mastImage'])if(typeof raw[k]==='string'&&raw[k])out[k]=raw[k];
  return out;
@@ -1391,9 +1409,9 @@ function normalizeData(raw){
    待確認 / TO CONFIRM: the Korean and English names and the Chinese address are working translations
    approved for use on 2026-11-02, not verified official names. Change them here only. */
 const FIXED_META={
- subtitle:{'zh-TW':'又松大學校友會','ko':'우송대학교 총동문회','en':'Woosong University Alumni Association'},
- issuer:{'zh-TW':'又松大學校友期刊','ko':'우송대학교 동문 소식지','en':'Woosong University Alumni Newsletter'},
- address:{'zh-TW':'韓國大田廣域市東區東大田路171','ko':'대전광역시 동구 동대전로 171','en':'171 Dongdaejeon-ro, Dong-gu, Daejeon, Korea'}
+ subtitle:{'zh-CN':'又松大学校友会','zh-TW':'又松大學校友會','ko':'우송대학교 총동문회','en':'Woosong University Alumni Association'},
+ issuer:{'zh-CN':'又松大学校友期刊','zh-TW':'又松大學校友期刊','ko':'우송대학교 동문 소식지','en':'Woosong University Alumni Newsletter'},
+ address:{'zh-CN':'韩国大田广域市东区东大田路171','zh-TW':'韓國大田廣域市東區東大田路171','ko':'대전광역시 동구 동대전로 171','en':'171 Dongdaejeon-ro, Dong-gu, Daejeon, Korea'}
 };
 const FIXED_KEYS=Object.keys(FIXED_META);
 /* Defaults written by earlier versions (the sample issue); treated as "not typed by the user". */
@@ -1408,7 +1426,8 @@ function normalizeMetaAuto(raw,out){
 }
 function syncFixedMeta(){
  const auto=data.metaAuto||{};
- for(const k of FIXED_KEYS)if(auto[k])data[k]=FIXED_META[k][currentLanguage];
+ const lang=data.lang==='zh-CN'?'zh-CN':'ko';
+ for(const k of FIXED_KEYS)if(auto[k])data[k]=FIXED_META[k][lang];
 }
 function sample(){
  const art=(title,body,tag)=>({title,body,sampleTag:tag});
@@ -1553,7 +1572,8 @@ function metaNoteHTML(k){
 }
 function renderInfo(){
  syncFixedMeta();
- $('#metadata').innerHTML=META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}">${metaNoteHTML(k)}</div>`).join('')+
+ const lang=data.lang==='zh-CN'?'zh-CN':'ko';
+ $('#metadata').innerHTML=`<div class="field"><span class="ds-label">${esc(t('issueLang.label'))}</span><div class="issue-lang" role="group">${ISSUE_LANGS.map(v=>`<button type="button" class="btn${v===lang?'':' secondary'} small" data-act="issue-lang" data-value="${v}" aria-pressed="${v===lang}">${esc(t('issueLang.'+v))}</button>`).join('')}</div><p class="tiny">${esc(t('issueLang.hint'))}</p></div>`+META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}">${metaNoteHTML(k)}</div>`).join('')+
  `<div class="field"><label>${esc(t('field.logo'))}</label>${fileControl('logo',false,data.logo?t('logo.uploaded'):'')}${data.logo?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(data.logo)}" alt="${esc(t('logo.alt'))}"><div class="main-photo-details"><strong>${esc(t('logo.uploaded'))}</strong><button type="button" class="btn warning small" data-act="logo-remove">${esc(t('logo.remove'))}</button></div></div>`:''}</div>`;
 }
 function pageButtonsHTML(){
@@ -2013,7 +2033,7 @@ function galleryHTML(a,pos,seed){
 function bodyInner(a,text){
  const marker=a.sampleTag?`<span class="sample-marker">${esc(t('sample.'+a.sampleTag+'Placeholder'))}</span>\n`:'';
  const body=text?richBody(a,text):(a.sampleTag||a.continuedFrom)?'':`<span class="is-placeholder">${esc(t('sample.newBody'))}</span>`;
- return marker+body+(a.continuesNext?`<span class="cont-marker cont-next">${esc(t('flow.contNext'))}</span>`:'');
+ return marker+body+(a.continuesNext?`<span class="cont-marker cont-next">${esc(tp('flow.contNext'))}</span>`:'');
 }
 /* ===== Paper masthead: illustration (line drawings, logo, own picture or none) and arrangement =====
    The four choices are simplified line drawings of Woosong landmarks after public photos — W7 Woosong Hall,
@@ -2135,7 +2155,7 @@ function card(a,pos,seed){
  const titleSize=Number(a.titleSize)||15,bodySize=Number(a.bodySize)||12;
  const img=a.image?`<img class="article-image ${pos==='left'?'float':''} crop-${CROPS.includes(a.cropRatio)?a.cropRatio:'original'}" style="object-position:${num(a.cropX)}% ${num(a.cropY)}%" src="${esc(a.image)}" alt="${esc(t('preview.articleImageAlt'))}">`
   :showDemo&&!a.continuedFrom?`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`:'';
- const title=(a.title?esc(a.title):`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`)+(a.continuedFrom?` <span class="cont-marker cont-prev">${esc(t('flow.contPrev'))}</span>`:'');
+ const title=(a.title?esc(a.title):`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`)+(a.continuedFrom?` <span class="cont-marker cont-prev">${esc(tp('flow.contPrev'))}</span>`:'');
  const extras=galleryHTML(a,pos,seed);
  return `<article data-aid="${a.id}" class="article card-${cardLayout} photo-${a.photoSide==='left'?'left':'right'}" style="--image-fit:${imageFit};--item-title-size:${titleSize}px;--item-body-size:${bodySize}px;font-family:${family};"><div class="article-head"><h3 class="article-title-custom" style="font-size:${titleSize}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${title}</h3></div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${bodySize}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${bodyInner(a,a.body)}</div>${extras}<div style="clear:both"></div></article>`;
 }
@@ -2164,7 +2184,7 @@ const PAPER_MEDIA=['cover','hero','mini','profiles','story'];
 const OPTIONAL_BODY=['cover','keywords','quotes','letters','pullquote','closing','briefs','steps','profiles'];
 const pad2=n=>String(n).padStart(2,'0');
 function footerHTML(){
- return `<footer class="footer"><strong>${esc(data.issuer)}</strong><span>${esc(t('footer.issuer',{v:data.issuer}))}</span><span>${esc(t('footer.address',{v:data.address}))}</span></footer>`;
+ return `<footer class="footer"><strong>${esc(data.issuer)}</strong><span>${esc(tp('footer.issuer',{v:data.issuer}))}</span><span>${esc(tp('footer.address',{v:data.address}))}</span></footer>`;
 }
 /* Line drawing of a campus building for the paper masthead when no logo is uploaded. */
 function buildingSketch(){
@@ -2184,7 +2204,7 @@ function paperArticle(a,v,part,seed,k){
  const bStyle=(a.bodySize?`font-size:${Number(a.bodySize)}px;`:'')+(a.bodyBold?'font-weight:700;':'');
  const noPlaceholder=quoteLike||['pullquote','closing'].includes(v);
  const headText=quoteLike?esc(a.title):st.head?esc(st.head):(noPlaceholder||a.title)?'':`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`;
- const contPrev=a.continuedFrom?` <span class="cont-marker cont-prev">${esc(t('flow.contPrev'))}</span>`:'';
+ const contPrev=a.continuedFrom?` <span class="cont-marker cont-prev">${esc(tp('flow.contPrev'))}</span>`:'';
  const lead=v==='briefs'?'<span class="sq px-box"></span>':'';
  const h3=(headText||contPrev||lead)?`<h3 class="article-title-custom${quoteLike?' pa-by':''}" style="${tStyle}">${lead}${headText}${contPrev}</h3>`:'';
  const tag=st.tag&&!quoteLike?`<span class="pa-tag px-box px-text">${esc(st.tag)}</span>`:'';
@@ -2221,7 +2241,7 @@ function previewItems(idx){
 }
 function paperPart(part,idx,seed){
  const v=VARIANTS.includes(part.variant)?part.variant:'story';
- const label=part.title||(v==='preview'?t('preview.issueLabel'):'');
+ const label=part.title||(v==='preview'?tp('preview.issueLabel'):'');
  const tag=label?`<div class="bar" data-pid="${part.id}"><span class="pill">${esc(label)}</span></div>`:'';
  if(v==='preview')return `<div class="pblk v-preview">${tag}${previewItems(idx)}</div>`;
  const n=part.articles.length,grid=['profiles','quotes','letters','mini','keywords'].includes(v)&&part.position==='full'?Math.max(1,Math.min(4,n)):1;
@@ -2592,7 +2612,8 @@ function onAction(btn){
   case 'art-next':if(part&&a){takeUndo();moveWhole(pageIndex,part,a);afterFlow(['flow.moved',{n:pageIndex+2}])}return;
   case 'art-unflow':if(a){delete a.continuesNext;delete a.continuedFrom;delete a.contJoin;structural()}return;
   case 'view':return setPreviewView(btn.dataset.view);
-  case 'export-pdf':saveNow();return window.print();
+  case 'export-pdf':{saveNow();const title=document.title;document.title=fileBase();window.print();document.title=title;return}
+  case 'issue-lang':{if(!ISSUE_LANGS.includes(btn.dataset.value))return;data.lang=btn.dataset.value;syncFixedMeta();persist();renderInfo();renderPreview();return}
   case 'export-png':return savePNG(btn);
   case 'export-png-all':return savePNGAll(btn);
   case 'export-canva':return saveCanva(btn);
@@ -2840,7 +2861,7 @@ async function autoFlow(){
 function saveJSON(){
  saveNow();
  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');
- link.href=url;link.download=`newsletter-${data.year||'year'}-${data.month||'month'}.json`;document.body.appendChild(link);link.click();link.remove();
+ link.href=url;link.download=`${fileBase()}.json`;document.body.appendChild(link);link.click();link.remove();
  setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 /* ===== Drafts: named snapshots of the whole issue kept in this browser (IndexedDB, so pictures fit) =====
@@ -2907,7 +2928,7 @@ async function ensurePngRenderer(){
  }
  throw new Error(t('msg.pngLoad'));
 }
-const fileBase=()=>`woosong-newsletter-${data.year||'year'}-${data.month||'month'}`;
+const fileBase=()=>`woosong-newsletter-${data.year||'year'}-${data.month||'month'}-${data.lang==='zh-CN'?'CN':'KR'}`;
 function downloadBlob(blob,name){
  const url=URL.createObjectURL(blob),link=document.createElement('a');
  link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();
