@@ -502,6 +502,13 @@ input[type=range]{accent-color:#245883}
 /* layout gallery thumbs for 12–14 */
 .template-thumb.mode12,.template-thumb.mode13,.template-thumb.mode14,.template-thumb.mode15{background:var(--paper)}
 @media print{.page.paper{padding:24px 28px 16px}}
+/* Gallery fix: keep every collage outside the clipped main-image frame. */
+.page.paper .pa > .extra-gallery.cg,
+.page.paper .pa > .extra-gallery:not(.cg),
+.page.paper .pa > .pa-text > .extra-gallery {clear:both;max-width:100%;min-width:0}
+.page.paper .pa-hero > .extra-gallery {grid-column:1 / -1;grid-row:auto;}
+.page.paper .pa-mini > .extra-gallery {grid-column:1 / -1;}
+.page.paper .pa .extra-gallery.cg {box-sizing:border-box;}
 </style>
 <style id="v20-designer-ui">
 /* ===== v20: designer-friendly Design and Content tabs ===== */
@@ -2336,9 +2343,11 @@ function paperArticle(a,v,part,seed,k){
  const body=`<div class="article-body article-body-custom" style="${bStyle}">${(a.body||!OPTIONAL_BODY.includes(v))?bodyInner(a,a.body):a.continuesNext?bodyInner(a,''):''}</div>`;
  const hasCg=COLLAGES.includes(a.collage),gal=galleryHTML(a,part.position,seed);
  const img=a.image?`<img class="pa-img" style="object-position:${num(a.cropX)}% ${num(a.cropY)}%" src="${esc(a.image)}" alt="${esc(t('preview.articleImageAlt'))}">`:'';
- let mediaInner=img+(hasCg?gal:'');
- if(!mediaInner&&PAPER_MEDIA.includes(v)&&showDemo&&!a.continuedFrom)mediaInner=`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`;
- const media=mediaInner?`<div class="pa-media${hasCg&&!img?' has-cg':''}">${mediaInner}</div>`:'',extra=hasCg?'':gal;
+ // Never nest a photo collage inside the fixed-ratio / overflow-hidden main-image frame.
+ // A main photo and a collage are two independent visual sections; both must remain visible.
+ let mediaInner=img;
+ if(!mediaInner&&!gal&&PAPER_MEDIA.includes(v)&&showDemo&&!a.continuedFrom)mediaInner=`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`;
+ const media=mediaInner?`<div class="pa-media">${mediaInner}</div>`:'',extra=gal;
  let inner;
  switch(v){
   case 'cover':inner=`${media}<div class="pa-text px-veil">${tag}${h3}${deck}<div class="underline"></div>${body}</div>${extra}`;break;
@@ -2664,15 +2673,41 @@ function readImage(file,callback,kind,onFail){
  img.onerror=()=>{URL.revokeObjectURL(url);fail(t('msg.imgRead'))};
  img.src=url;
 }
+/* Preserve the position of the photo controls while the article panel is rebuilt.
+   Otherwise the user lands in a large blank area after a photo upload. */
+function uploadAnchor(input){
+ const side=$('.side'),section=input.closest('.additional-photo-section,.main-photo-section');
+ const aid=input.closest('[data-aid]')?.dataset.aid;
+ if(!side||!section||!aid)return ()=>{};
+ const selector=section.classList.contains('additional-photo-section')?'.additional-photo-section':'.main-photo-section';
+ const before=section.getBoundingClientRect().top-side.getBoundingClientRect().top;
+ return ()=>{
+  const item=[...document.querySelectorAll('#partsEdit .article-item')].find(x=>x.dataset.aid===aid);
+  const updated=item?.querySelector(selector);
+  if(!updated)return;
+  const after=updated.getBoundingClientRect().top-side.getBoundingClientRect().top;
+  side.scrollTop+=after-before;
+ };
+}
 function handleUpload(input){
  const kind=input.dataset.upload,files=Array.from(input.files||[]);input.value='';
  if(!files.length)return;
  if(kind==='logo'){readImage(files[0],v=>{data.logo=v;persist();renderInfo();renderPreview()},'logo');return}
  if(kind==='mastimg'){readImage(files[0],v=>{data.mastImage=v;data.mastArt='custom';persist();renderDesign();renderPreview()},'mastimg');return}
  const pid=input.closest('[data-pid]')?.dataset.pid,aid=input.closest('[data-aid]')?.dataset.aid;
- const target=()=>findArticle(pid,aid);
- if(kind==='cover')readImage(files[0],v=>{const a=target();if(!a)return;a.image=v;artTab.set(aid,'img');structural()},'photo');
- if(kind==='extra')for(const file of files)readImage(file,(v,w,h)=>{const a=target();if(!a)return;a.extraImages.push({id:shortId(),src:v,ratio:'original',fit:'contain',x:50,y:50,w,h});artTab.set(aid,'img');structural()},'photo');
+ const target=()=>findArticle(pid,aid),restorePosition=uploadAnchor(input);
+ if(kind==='cover')readImage(files[0],v=>{const a=target();if(!a)return;a.image=v;artTab.set(aid,'img');structural();restorePosition()},'photo');
+ if(kind==='extra'){
+  // Process all selected files first, then repaint once. Preserve the upload selection order.
+  const pending=files.map(file=>new Promise(resolve=>readImage(file,(src,w,h)=>resolve({src,w,h}),'photo',()=>resolve(null))));
+  Promise.all(pending).then(items=>{
+   const a=target();if(!a)return;
+   const valid=items.filter(Boolean);if(!valid.length)return;
+   flushHistory();
+   for(const photo of valid)a.extraImages.push({id:shortId(),...photo,ratio:'original',fit:'contain',x:50,y:50});
+   artTab.set(aid,'img');structural();restorePosition();
+  });
+ }
 }
 function onAction(btn){
  if(!/^(undo|redo|tab|lang|view|page-select|part-toggle|art-toggle|shortcuts|contact-|manual-|demo-)/.test(btn.dataset.act))flushHistory();
