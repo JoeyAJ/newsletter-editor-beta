@@ -693,7 +693,32 @@ body[data-tab="content"] #pagesStack .nex-sheet .bar[data-pid]:hover .pill{outli
 .draft-list .btn{width:auto;flex:none;min-width:0;min-height:30px;padding:5px 10px}
 .tiny.warn{color:#ad4029}
 </style>
-<style id="nex-submission-footer">.page .footer{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);align-items:start;gap:9px}.page .footer>span{min-width:0;overflow-wrap:anywhere}.page .footer>span:nth-child(2){text-align:center}.page .footer>span:nth-child(3){text-align:right}.page .footer .footer-submission{font-weight:700}</style></head><body><div class="app nex-resizable"><aside class="side">
+<style id="nex-submission-footer">.page .footer{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);align-items:start;gap:9px}.page .footer>span{min-width:0;overflow-wrap:anywhere}.page .footer>span:nth-child(2){text-align:center}.page .footer>span:nth-child(3){text-align:right}.page .footer .footer-submission{font-weight:700}</style><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css">
+<style id="nex-typography-colors-v22">
+/* Additive font selectors and per-page heading palette. */
+.nex-palette-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:10px 0}
+.nex-palette-field{display:flex;gap:7px;align-items:center;font-size:11px;color:#304760;font-weight:700}
+.nex-palette-field input[type=color]{width:53px;height:35px;min-width:53px;padding:2px;border:1px solid #cbd6e2;cursor:pointer}
+.nex-font-group{margin:12px 0;padding:10px;border:1px solid #d9e3ef;border-radius:9px;background:#f8fbff}
+.nex-font-group label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:#29415f}
+.nex-font-group select{width:100%}
+.page.nex-mast-font .newsletter,.page.nex-mast-font .mast-compact .mc-title{font-family:var(--nex-mast-font)!important}
+.page.nex-heading-font .bar .pill{font-family:var(--nex-heading-font)!important}
+.page .article .article-title-custom{font-family:var(--nex-title-font,inherit)!important}
+.page .article .article-body-custom{font-family:var(--nex-body-font,inherit)!important}
+/* Only override the colors when the user explicitly enables a custom palette. */
+.page.nex-custom-heading .bar .pill{color:var(--nex-heading-text)!important;border-color:var(--nex-heading-accent)!important}
+.page.nex-custom-heading .bar:before,.page.nex-custom-heading .bar:after{background:var(--nex-heading-accent)!important}
+.page.nex-custom-heading:is(.style1,.style2,.style5,.style6,.style7,.style10,.style13,.style15) .bar .pill{background:var(--nex-heading-bg)!important}
+.page.nex-custom-heading.style13 .bar .pill{background:linear-gradient(105deg,var(--nex-heading-bg),var(--nex-heading-accent))!important}
+.page.nex-custom-heading .bar .pill:before{color:var(--nex-heading-accent)!important}
+.page.nex-custom-heading:is(.style3,.style4,.style5,.style9,.style11,.style12,.style15,.style16) .bar .pill{border-color:var(--nex-heading-accent)!important}
+.page.nex-custom-heading.style14 .bar .pill:before{color:var(--nex-heading-accent)!important}
+@media print{.page.nex-custom-heading .bar .pill{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="app nex-resizable"><aside class="side">
 <div class="ux-top">
 <div class="lang-controls" role="group" data-i18n-attr="aria-label:lang.label"><button type="button" data-act="lang" data-lang="zh-TW" lang="zh-Hant">繁體中文</button><button type="button" data-act="lang" data-lang="ko" lang="ko">한국어</button><button type="button" data-act="lang" data-lang="en" lang="en">English</button></div>
 <div class="ux-titlebar"><h2 data-i18n="app.title">Newsletter 編輯器</h2><button type="button" class="manual-btn" id="manualBtn" data-act="manual-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5"/><path d="M9 7.5h7M9 11h5"/></svg><span data-i18n="man.button"></span></button></div><p class="sub" data-i18n="app.subtitle"></p>
@@ -774,7 +799,17 @@ const translations={
  'article.confirmDelete':'確定刪除這篇文章？','article.title':'標題','article.body':'正文／活動資訊（可換行）',
  'article.sampleNotice':'系統示範標記：','article.sampleRemove':'移除標記',
  'type.group':'文字設定','type.titleSize':'標題字級','type.bodySize':'正文字級','type.font':'字體','type.titleBold':'標題加粗','type.bodyBold':'正文加粗',
- 'font.sans':'黑體','font.serif':'宋體（襯線）','font.classic':'經典報刊體',
+   'font.main':'主標題字體',
+  'font.section':'欄目標題字體',
+  'font.articleTitle':'文章標題字體',
+  'font.articleBody':'文章正文字體',
+  'color.heading':'欄目配色',
+  'color.bg':'背景色',
+  'color.text':'文字色',
+  'color.accent':'強調線色',
+  'color.reset':'恢復樣式預設配色',
+  'font.notice':'Noto 與 Pretendard 可連線載入；HY 與 NanumSquare Neo 需本機安裝，否則使用替代字體。',
+'font.sans':'黑體','font.serif':'宋體（襯線）','font.classic':'經典報刊體',
  'img.group':'圖片設定','img.coverTitle':'① 主圖／封面圖片','img.coverUpload':'上傳或更換主圖','img.uploaded':'已上傳主圖','img.coverHelp':'下方可調整這張圖片的排版與裁剪。',
  'img.remove':'移除圖片','img.noCover':'尚未上傳主圖；選擇圖片後會在這裡顯示縮圖。','img.thumbAlt':'主圖縮圖','img.coverSettings':'主圖排版與裁剪設定',
  'img.cardLayout':'文章版面','layout.auto':'自動適配','layout.full':'整行寬版','layout.compact':'緊湊卡片','layout.portrait':'直式圖片優先','layout.split':'圖文左右',
@@ -953,7 +988,17 @@ const translations={
  'article.confirmDelete':'이 기사를 삭제할까요?','article.title':'제목','article.body':'본문 / 행사 정보 (줄바꿈 가능)',
  'article.sampleNotice':'시스템 예시 표시:','article.sampleRemove':'표시 삭제',
  'type.group':'텍스트 설정','type.titleSize':'제목 글자 크기','type.bodySize':'본문 글자 크기','type.font':'글꼴','type.titleBold':'제목 굵게','type.bodyBold':'본문 굵게',
- 'font.sans':'고딕체','font.serif':'명조체','font.classic':'신문체',
+   'font.main':'메인 제목 글꼴',
+  'font.section':'섹션 제목 글꼴',
+  'font.articleTitle':'기사 제목 글꼴',
+  'font.articleBody':'기사 본문 글꼴',
+  'color.heading':'섹션 색상',
+  'color.bg':'배경색',
+  'color.text':'글자색',
+  'color.accent':'강조선 색',
+  'color.reset':'스타일 기본 색상으로 복원',
+  'font.notice':'Noto 및 Pretendard는 온라인으로 불러옵니다. HY와 나눔스퀘어 네오는 기기에 설치되어 있어야 하며, 없으면 대체 글꼴로 표시됩니다.',
+'font.sans':'고딕체','font.serif':'명조체','font.classic':'신문체',
  'img.group':'이미지 설정','img.coverTitle':'① 대표 이미지','img.coverUpload':'대표 이미지 업로드 또는 변경','img.uploaded':'대표 이미지 업로드 완료','img.coverHelp':'아래에서 이미지 배치와 자르기를 조정할 수 있습니다.',
  'img.remove':'이미지 삭제','img.noCover':'등록된 대표 이미지가 없습니다. 이미지를 선택하면 여기에 미리보기가 표시됩니다.','img.thumbAlt':'대표 이미지 미리보기','img.coverSettings':'대표 이미지 배치 및 자르기',
  'img.cardLayout':'기사 레이아웃','layout.auto':'자동 맞춤','layout.full':'가로 전체','layout.compact':'작은 카드','layout.portrait':'세로 이미지 중심','layout.split':'이미지·본문 나란히',
@@ -1132,7 +1177,17 @@ const translations={
  'article.confirmDelete':'Delete this article?','article.title':'Title','article.body':'Body / Event details (line breaks allowed)',
  'article.sampleNotice':'System sample marker:','article.sampleRemove':'Remove Marker',
  'type.group':'Text Settings','type.titleSize':'Heading Font Size','type.bodySize':'Body Font Size','type.font':'Font','type.titleBold':'Bold heading','type.bodyBold':'Bold body text',
- 'font.sans':'Sans-serif','font.serif':'Serif','font.classic':'Classic newspaper',
+   'font.main':'Main title font',
+  'font.section':'Section heading font',
+  'font.articleTitle':'Article title font',
+  'font.articleBody':'Article body font',
+  'color.heading':'Section colors',
+  'color.bg':'Background',
+  'color.text':'Text',
+  'color.accent':'Accent / rule',
+  'color.reset':'Restore style defaults',
+  'font.notice':'Noto and Pretendard load online; HY and NanumSquare Neo require local installation or a fallback font is used.',
+'font.sans':'Sans-serif','font.serif':'Serif','font.classic':'Classic newspaper',
  'img.group':'Image Settings','img.coverTitle':'① Main / Cover Image','img.coverUpload':'Upload or replace the main image','img.uploaded':'Main image uploaded','img.coverHelp':'Adjust the layout and cropping of this image below.',
  'img.remove':'Remove Image','img.noCover':'No main image yet. A thumbnail appears here after you choose an image.','img.thumbAlt':'Main image thumbnail','img.coverSettings':'Main Image Layout & Crop',
  'img.cardLayout':'Article layout','layout.auto':'Auto fit','layout.full':'Full width','layout.compact':'Compact card','layout.portrait':'Portrait image first','layout.split':'Image beside text',
@@ -1283,7 +1338,24 @@ const ISSUE_LANGS=['ko','zh-CN'];
 const STORAGE_KEY='woosong-newsletter-v1',LEGACY_BACKUP_KEY='woosong-newsletter-v1-legacy-backup',LANG_KEY='woosong-ui-language',TAB_KEY='woosong-ui-tab',WIDTH_KEY='nex-sidebar-width',DEMO_KEY='woosong-ui-demo-images';
 const TABS=['info','layout','content','export'];
 const META_FIELDS=['university','mastTitle','subtitle','month','year','volume','issuer','submissionEmail','address'];
-const META_KEYS=[...META_FIELDS,'logo'];
+const META_KEYS=[...META_FIELDS,'logo','mastFont'];
+const NEX_FONTS=['default','sans','serif','classic','noto-sans-kr','noto-serif-kr','pretendard','nanum-square-neo','hy-gyeon','hy-jung','hy-head'];
+const NEX_FONT_CSS={
+ 'sans':"Arial, 'Noto Sans KR', 'Malgun Gothic', sans-serif",
+ 'serif':"Georgia, 'Noto Serif KR', 'Batang', 'SimSun', serif",
+ 'classic':"'Times New Roman', 'Batang', 'PMingLiU', serif",
+ 'noto-sans-kr':"'Noto Sans KR', 'Malgun Gothic', sans-serif",
+ 'noto-serif-kr':"'Noto Serif KR', 'Batang', serif",
+ 'pretendard':"'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif",
+ 'nanum-square-neo':"'NanumSquare Neo', 'NanumSquareNeo', 'Noto Sans KR', 'Malgun Gothic', sans-serif",
+ 'hy-gyeon':"'HY견고딕', 'HY 견고딕', 'HYGothic-Extra', 'Malgun Gothic', sans-serif",
+ 'hy-jung':"'HY중고딕', 'HY 중고딕', 'HYGothic-Medium', 'Malgun Gothic', sans-serif",
+ 'hy-head':"'HY헤드라인M', 'HY 헤드라인M', 'HYHeadLine-Medium', 'Malgun Gothic', sans-serif"
+};
+const nexFont=(name)=>name&&NEX_FONT_CSS[name]?NEX_FONT_CSS[name]:'';
+const nexFontOptions=(selected,defaultText)=>NEX_FONTS.map(x=>opt(x,x==='default'?defaultText:x==='sans'?t('font.sans'):x==='serif'?t('font.serif'):x==='classic'?t('font.classic'):x==='noto-sans-kr'?'Noto Sans KR':x==='noto-serif-kr'?'Noto Serif KR':x==='pretendard'?'Pretendard':x==='nanum-square-neo'?'나눔스퀘어 네오 (NanumSquare Neo)':x==='hy-gyeon'?'HY 견고딕':x==='hy-jung'?'HY 중고딕':'HY 헤드라인M',(selected||'default')===x)).join('');
+const nexFontField=(key,value,attr)=>`<div class="nex-font-group"><label>${esc(t(key))}</label><select ${attr}>${nexFontOptions(value,t('font.classic')+' / '+t('font.sans'))}</select><p class="tiny">${esc(t('font.notice'))}</p></div>`;
+const nexColor=(x,def)=>/^#[0-9a-fA-F]{6}$/.test(x||'')?x:def;
 const LAYOUTS=Array.from({length:15},(_,i)=>'mode'+(i+1));
 const STYLES=Array.from({length:16},(_,i)=>'style'+(i+1));
 const POSITIONS=['left','middle','right','full'];
@@ -1366,7 +1438,7 @@ function normalizePart(x,legacy){
 }
 function normalizePage(p,legacy){
  p=p&&typeof p==='object'?p:{};
- return {...(p.autoCreated?{autoCreated:true}:{}),id:p.id||uid(),header:HEADERS.includes(p.header)?p.header:'full',layout:LAYOUTS.includes(p.layout)?p.layout:'mode1',headingStyle:STYLES.includes(p.headingStyle)?p.headingStyle:'style1',parts:(Array.isArray(p.parts)?p.parts:[]).map(x=>normalizePart(x,legacy))};
+ return {...(p.autoCreated?{autoCreated:true}:{}),id:p.id||uid(),header:HEADERS.includes(p.header)?p.header:'full',layout:LAYOUTS.includes(p.layout)?p.layout:'mode1',headingStyle:STYLES.includes(p.headingStyle)?p.headingStyle:'style1',headingFont:NEX_FONTS.includes(p.headingFont)?p.headingFont:'default',headingColors:p.headingColors&&typeof p.headingColors==='object'?{bg:nexColor(p.headingColors.bg,'#193d5c'),text:nexColor(p.headingColors.text,'#ffffff'),accent:nexColor(p.headingColors.accent,'#e76b63')}:null,parts:(Array.isArray(p.parts)?p.parts:[]).map(x=>normalizePart(x,legacy))};
 }
 /* Converts the old "left/right columns + extra parts" format into the unified Part model. */
 function legacyPage(p,root){
@@ -1573,7 +1645,7 @@ function metaNoteHTML(k){
 function renderInfo(){
  syncFixedMeta();
  const lang=data.lang==='zh-CN'?'zh-CN':'ko';
- $('#metadata').innerHTML=`<div class="field"><span class="ds-label">${esc(t('issueLang.label'))}</span><div class="issue-lang" role="group">${ISSUE_LANGS.map(v=>`<button type="button" class="btn${v===lang?'':' secondary'} small" data-act="issue-lang" data-value="${v}" aria-pressed="${v===lang}">${esc(t('issueLang.'+v))}</button>`).join('')}</div><p class="tiny">${esc(t('issueLang.hint'))}</p></div>`+META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}">${metaNoteHTML(k)}</div>`).join('')+
+ $('#metadata').innerHTML=nexFontField('font.main',data.mastFont,'data-mast-font')+`<div class="field"><span class="ds-label">${esc(t('issueLang.label'))}</span><div class="issue-lang" role="group">${ISSUE_LANGS.map(v=>`<button type="button" class="btn${v===lang?'':' secondary'} small" data-act="issue-lang" data-value="${v}" aria-pressed="${v===lang}">${esc(t('issueLang.'+v))}</button>`).join('')}</div><p class="tiny">${esc(t('issueLang.hint'))}</p></div>`+META_FIELDS.map(k=>`<div class="field"><label for="meta-${k}">${esc(t('field.'+k))}</label><input id="meta-${k}" type="text" data-meta="${k}" value="${esc(data[k])}" placeholder="${esc(t('ph.'+k))}">${metaNoteHTML(k)}</div>`).join('')+
  `<div class="field"><label>${esc(t('field.logo'))}</label>${fileControl('logo',false,data.logo?t('logo.uploaded'):'')}${data.logo?`<div class="main-photo-card"><img class="main-photo-thumbnail" src="${esc(data.logo)}" alt="${esc(t('logo.alt'))}"><div class="main-photo-details"><strong>${esc(t('logo.uploaded'))}</strong><button type="button" class="btn warning small" data-act="logo-remove">${esc(t('logo.remove'))}</button></div></div>`:''}</div>`;
 }
 function pageButtonsHTML(){
@@ -1625,7 +1697,7 @@ ${isPaper(pg)?mastDesignHTML():''}
 <div class="ds-field"><span class="ds-label">${esc(t('ds.layout'))}</span><div class="seg" role="group"><button type="button" class="seg-btn${group==='paper'?' active':''}" data-act="layout-group" data-group="paper" aria-pressed="${group==='paper'}">${esc(t('ds.groupPaper'))}</button><button type="button" class="seg-btn${group==='classic'?' active':''}" data-act="layout-group" data-group="classic" aria-pressed="${group==='classic'}">${esc(t('ds.groupClassic'))}</button></div>
 <section class="template-gallery-container"><div class="template-gallery">${gallery}</div>${moreLayouts?`<details class="more-fold"${moreOpen?' open':''}><summary>${esc(t('ds.moreLayouts',{n:LAYOUTS.length-PAPER_LAYOUTS.length-CORE_CLASSIC.length}))}</summary><div class="template-gallery">${moreLayouts}</div></details>`:''}<label class="demo-toggle"><input type="checkbox" data-demo-toggle${showDemo?' checked':''}> ${esc(t('design.demoToggle'))}</label></section>
 ${data.pages.length>1?`<button type="button" class="btn secondary small block" data-act="layout-all">${esc(t('ds.applyAll'))}</button>`:''}</div></section>
-<section class="ds-step"><details class="ds-fold" data-fold="design:heading"${fold('design:heading',false)?' open':''}><summary>${stepHead(3,t('design.headingTitle'),t('design.headingHint'))}</summary>${isPaper(pg)?`<p class="tiny">${esc(t('ds.headingPaper'))}</p>`:''}<div class="style-picks">${picks}</div><details class="more-fold"${CORE_STYLES.includes(pg.headingStyle)?'':' open'}><summary>${esc(t('ds.moreStyles',{n:STYLES.length-CORE_STYLES.length}))}</summary><div class="style-picks">${morePicks}</div></details><p class="tiny">${esc(t('design.partNote'))}</p></details></section>`;
+<section class="ds-step"><details class="ds-fold" data-fold="design:heading"${fold('design:heading',false)?' open':''}><summary>${stepHead(3,t('design.headingTitle'),t('design.headingHint'))}</summary>${isPaper(pg)?`<p class="tiny">${esc(t('ds.headingPaper'))}</p>`:''}${nexFontField('font.section',pg.headingFont,'data-heading-font')}<div class="nex-font-group"><label>${esc(t('color.heading'))}</label><div class="nex-palette-grid">${[['bg','color.bg','#193d5c'],['text','color.text','#ffffff'],['accent','color.accent','#e76b63']].map(([k,label,def])=>`<label class="nex-palette-field">${esc(t(label))}<input type="color" data-heading-color="${k}" value="${nexColor(pg.headingColors?.[k],def)}"></label>`).join('')}</div><button type="button" class="btn secondary small" data-act="heading-reset-color">${esc(t('color.reset'))}</button></div><div class="style-picks">${picks}</div><details class="more-fold"${CORE_STYLES.includes(pg.headingStyle)?'':' open'}><summary>${esc(t('ds.moreStyles',{n:STYLES.length-CORE_STYLES.length}))}</summary><div class="style-picks">${morePicks}</div></details><p class="tiny">${esc(t('design.partNote'))}</p></details></section>`;
 }
 /* ===== Issue templates: whole 1-, 2- and 4-page issues in the alumni paper style =====
    Layout and content are kept apart. ISSUE_TEMPLATES only says which block goes where (page, row position,
@@ -1884,7 +1956,7 @@ function articleHTML(part,a,j,count){
  const typeControls=`<div class="type-controls">
 <div><label>${esc(t('type.titleSize'))}</label><select data-art-field="titleSize">${[12,14,15,16,18,20,24,28].map(n=>opt(n,n+'px',String(a.titleSize||15)===String(n))).join('')}</select></div>
 <div><label>${esc(t('type.bodySize'))}</label><select data-art-field="bodySize">${[10,11,12,13,14,16,18].map(n=>opt(n,n+'px',String(a.bodySize||12)===String(n))).join('')}</select></div>
-<div><label>${esc(t('type.font'))}</label>${sel('fontFamily',['sans','serif','classic'],a.fontFamily||'sans','font.')}</div><div></div>
+<div><label>${esc(t('font.articleTitle'))}</label><select data-art-field="titleFont">${nexFontOptions(a.titleFont||a.fontFamily||'default',t('font.sans'))}</select></div><div><label>${esc(t('font.articleBody'))}</label><select data-art-field="bodyFont">${nexFontOptions(a.bodyFont||a.fontFamily||'default',t('font.sans'))}</select></div>
 <label class="type-bold"><input type="checkbox" data-art-field="titleBold"${a.titleBold!==false?' checked':''}>${esc(t('type.titleBold'))}</label>
 <label class="type-bold"><input type="checkbox" data-art-field="bodyBold"${a.bodyBold?' checked':''}>${esc(t('type.bodyBold'))}</label></div>`;
  const cover=`<section class="main-photo-section"><div class="photo-section-title">${esc(t('img.coverTitle'))}</div><div class="image-upload-label">${esc(t('img.coverUpload'))}</div>${fileControl('cover',false,a.image?t('img.uploaded'):'')}
@@ -2202,14 +2274,14 @@ function mastHTML(pg){
  return `<header class="mast${paper?` ms-${mstyle}${logo?'':' no-art'}`:''}"><div class="schoolmark">${logo}</div><div class="mast-title"><div class="univ">${esc(data.university)}</div><div class="newsletter"${fitCss?` style="${fitCss}"`:''}>${esc(data.mastTitle)}</div><div class="korean">${esc(data.subtitle)}</div></div><div class="issue"><div><span class="month">${esc(data.month)}</span> <span class="year">${esc(data.year)}</span></div><div class="vol">vol. ${esc(data.volume)}</div></div></header>`;
 }
 function card(a,pos,seed){
- const family=a.fontFamily==='serif'?"Georgia, 'Noto Serif KR', 'Batang', 'SimSun', serif":a.fontFamily==='classic'?"'Times New Roman', 'Batang', 'PMingLiU', serif":"Arial, 'Noto Sans KR', 'Malgun Gothic', 'Microsoft JhengHei', sans-serif";
+ const family=nexFont(a.fontFamily)||NEX_FONT_CSS.sans;const titleFont=nexFont(a.titleFont)||family,bodyFont=nexFont(a.bodyFont)||family;
  const cardLayout=CARD_LAYOUTS.includes(a.cardLayout)?a.cardLayout:'auto',imageFit=a.imageFit==='cover'?'cover':'contain';
  const titleSize=Number(a.titleSize)||15,bodySize=Number(a.bodySize)||12;
  const img=a.image?`<img class="article-image ${pos==='left'?'float':''} crop-${CROPS.includes(a.cropRatio)?a.cropRatio:'original'}" style="object-position:${num(a.cropX)}% ${num(a.cropY)}%" src="${esc(a.image)}" alt="${esc(t('preview.articleImageAlt'))}">`
   :showDemo&&!a.continuedFrom?`<div class="demo-visual" data-label="${esc(t('sample.imagePlaceholder'))}" title="${esc(t('sample.imagePlaceholder'))}">${illustration(seed)}</div>`:'';
  const title=(a.title?esc(a.title):`<span class="is-placeholder">${esc(t('sample.newTitle'))}</span>`)+(a.continuedFrom?` <span class="cont-marker cont-prev">${esc(tp('flow.contPrev'))}</span>`:'');
  const extras=galleryHTML(a,pos,seed);
- return `<article data-aid="${a.id}" class="article card-${cardLayout} photo-${a.photoSide==='left'?'left':'right'}" style="--image-fit:${imageFit};--item-title-size:${titleSize}px;--item-body-size:${bodySize}px;font-family:${family};"><div class="article-head"><h3 class="article-title-custom" style="font-size:${titleSize}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${title}</h3></div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${bodySize}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${bodyInner(a,a.body)}</div>${extras}<div style="clear:both"></div></article>`;
+ return `<article data-aid="${a.id}" class="article card-${cardLayout} photo-${a.photoSide==='left'?'left':'right'}" style="--image-fit:${imageFit};--item-title-size:${titleSize}px;--item-body-size:${bodySize}px;font-family:${family};--nex-title-font:${titleFont};--nex-body-font:${bodyFont};"><div class="article-head"><h3 class="article-title-custom" style="font-size:${titleSize}px;font-weight:${a.titleBold===false?400:700};font-family:inherit">${title}</h3></div><div class="underline"></div>${img}<div class="article-body article-body-custom" style="font-size:${bodySize}px;font-weight:${a.bodyBold?700:400};font-family:inherit">${bodyInner(a,a.body)}</div>${extras}<div style="clear:both"></div></article>`;
 }
 function pageHTML(pg){
  if(isPaper(pg))return paperPageHTML(pg);
@@ -2251,7 +2323,7 @@ function splitTitle(title){
 }
 function paperArticle(a,v,part,seed,k){
  const st=splitTitle(a.title),quoteLike=['quotes','letters'].includes(v);
- const family=a.fontFamily==='serif'?"Georgia, 'Noto Serif KR', 'Batang', 'SimSun', serif":a.fontFamily==='classic'?"'Times New Roman', 'Batang', 'PMingLiU', serif":a.fontFamily==='sans'?"Arial, 'Noto Sans KR', 'Malgun Gothic', 'Microsoft JhengHei', sans-serif":'';
+ const family=nexFont(a.fontFamily);const titleFont=nexFont(a.titleFont)||family||'inherit',bodyFont=nexFont(a.bodyFont)||family||'inherit';
  const tStyle=(a.titleSize?`font-size:${Number(a.titleSize)}px;`:'')+(a.titleBold===false?'font-weight:400;':'');
  const bStyle=(a.bodySize?`font-size:${Number(a.bodySize)}px;`:'')+(a.bodyBold?'font-weight:700;':'');
  const noPlaceholder=quoteLike||['pullquote','closing'].includes(v);
@@ -2279,7 +2351,7 @@ function paperArticle(a,v,part,seed,k){
   case 'story':inner=`${tag}${h3}${deck}${media}${body}${extra}`;break;
   default:inner=`${tag}${h3}${deck}${body}${media}${extra}`;
  }
- return `<article data-aid="${a.id}" class="article pa pa-${v}${media?' has-media':' no-media'}${hasCg&&!img?' has-cg':''}${a.photoSide==='left'?' photo-left':''}"${family?` style="font-family:${family}"`:''}>${inner}</article>`;
+ return `<article data-aid="${a.id}" class="article pa pa-${v}${media?' has-media':' no-media'}${hasCg&&!img?' has-cg':''}${a.photoSide==='left'?' photo-left':''}" style="${family?'font-family:'+family+';':''}--nex-title-font:${titleFont};--nex-body-font:${bodyFont}">${inner}</article>`;
 }
 /* "In this issue": built from the pages themselves (first heading and first headline of each later page). */
 function previewItems(idx){
@@ -2316,6 +2388,12 @@ function paperPageHTML(pg){
 function sheetAttrs(el,i){
  const pg=data.pages[i],active=i===pageIndex;
  el.className=`page nex-sheet ${pg.layout} ${pg.headingStyle}${isPaper(pg)?' paper':''}${active?' nex-page-active':''}`;
+ el.style.setProperty('--nex-mast-font',nexFont(data.mastFont)|| (isPaper(pg)?"'Noto Serif TC','Noto Serif KR',Georgia,serif":"Georgia,'Times New Roman',serif"));
+ el.style.setProperty('--nex-heading-font',nexFont(pg.headingFont)||'inherit');
+ el.classList.toggle('nex-mast-font',!!nexFont(data.mastFont));
+ el.classList.toggle('nex-heading-font',!!nexFont(pg.headingFont));
+ el.classList.toggle('nex-custom-heading',!!pg.headingColors);
+ for(const [k,def] of [['bg','#193d5c'],['text','#ffffff'],['accent','#e76b63']])el.style.setProperty('--nex-heading-'+k,nexColor(pg.headingColors?.[k],def));
  el.dataset.sheet=i;el.dataset.sheetCaption=`${i+1} / ${data.pages.length}`;
  if(active){el.id='preview';el.removeAttribute('title')}else{el.removeAttribute('id');el.title=t('preview.selectPage')}
 }
@@ -2408,7 +2486,7 @@ function addPage(duplicate){
  if(duplicate)page=cloneWithNewIds(cur);
  else{
   const left=cur.parts.find(p=>p.position==='left'),right=cur.parts.find(p=>p.position==='right');
-  page=normalizePage({header:cur.header,layout:cur.layout,headingStyle:cur.headingStyle,parts:[{title:left?left.title:'',position:'left'},{title:right?right.title:'',position:'right'}]},false);
+  page=normalizePage({header:cur.header,layout:cur.layout,headingStyle:cur.headingStyle,headingFont:cur.headingFont,headingColors:cur.headingColors,parts:[{title:left?left.title:'',position:'left'},{title:right?right.title:'',position:'right'}]},false);
  }
  data.pages.splice(pageIndex+1,0,page);pageIndex++;
  persist();renderDesign();renderContent();renderPreview();
@@ -2616,9 +2694,10 @@ function onAction(btn){
   case 'mast-art':{const k=btn.dataset.art;if(k==='custom'&&!data.mastImage){document.querySelector('.mast-upload input[type=file]')?.click();return}if([...MAST_ARTS,'logo','custom','none'].includes(k)){data.mastArt=k;persist();renderDesign();renderPreview()}return}
   case 'mast-style':if(MAST_STYLES.includes(btn.dataset.style)){data.mastStyle=btn.dataset.style;persist();renderDesign();renderPreview()}return;
   case 'header-pick':if(HEADERS.includes(btn.dataset.header)){pg.header=btn.dataset.header;persist();renderDesign();renderCurrentSheet()}return;
-  case 'layout-all':for(const p of data.pages){p.layout=pg.layout;p.headingStyle=pg.headingStyle}persist();renderDesign();renderContent();renderPreview();return;
+  case 'layout-all':for(const p of data.pages){p.layout=pg.layout;p.headingStyle=pg.headingStyle;p.headingFont=pg.headingFont;p.headingColors=pg.headingColors?{...pg.headingColors}:null}persist();renderDesign();renderContent();renderPreview();return;
   case 'page-left':case 'page-right':if(move(data.pages,pageIndex,act==='page-left'?-1:1)){pageIndex+=act==='page-left'?-1:1;persist();renderDesign();renderContent();renderPreview()}return;
   case 'heading-pick':pg.headingStyle=btn.dataset.style;persist();renderDesign();renderCurrentSheet();return;
+  case 'heading-reset-color':pg.headingColors=null;persist();renderDesign();renderCurrentSheet();return;
   case 'part-add-menu':addPicker=!addPicker;return renderContent();
   case 'part-add':{const v=VARIANTS.includes(btn.dataset.variant)?btn.dataset.variant:'',paper=isPaper(pg);
    const p=normalizePart({title:v==='preview'?'':'',position:paper?'full':'right',variant:v&&v!=='story'?v:undefined,articles:v==='preview'?[]:[newArticle()]},false);
@@ -2725,6 +2804,10 @@ document.addEventListener('input',e=>{
 document.addEventListener('change',e=>{
  const el=e.target;flushHistory();
  if(el.id==='importFile')return importJSON(el);
+ if(el.matches('[data-mast-font]')){data.mastFont=NEX_FONTS.includes(el.value)?el.value:'default';persist();renderPreview();return}
+ if(el.matches('[data-heading-font]')){curPage().headingFont=NEX_FONTS.includes(el.value)?el.value:'default';persist();renderCurrentSheet();return}
+ if(el.matches('[data-heading-color]')){const pg=curPage(),k=el.dataset.headingColor;if(!['bg','text','accent'].includes(k))return;pg.headingColors=pg.headingColors||{bg:'#193d5c',text:'#ffffff',accent:'#e76b63'};pg.headingColors[k]=nexColor(el.value,pg.headingColors[k]);persist();renderCurrentSheet();return}
+
  if(!el.closest('.side'))return;
  if(el.matches('input[type=file][data-upload]'))return handleUpload(el);
  if(el.matches('[data-page-header]')&&HEADERS.includes(el.value)){curPage().header=el.value;persist();renderCurrentSheet();return}
@@ -2764,7 +2847,7 @@ async function undoFlow(){
 }
 function afterFlow(msg){flowMessage=[msg];persist();renderPanels();renderPreview()}
 function ensureNextPage(i){
- if(!data.pages[i+1]){const pg=data.pages[i];const np=normalizePage({header:pg.header,layout:pg.layout,headingStyle:pg.headingStyle,parts:[]},false);np.autoCreated=true;data.pages.splice(i+1,0,np)}
+ if(!data.pages[i+1]){const pg=data.pages[i];const np=normalizePage({header:pg.header,layout:pg.layout,headingStyle:pg.headingStyle,headingFont:pg.headingFont,headingColors:pg.headingColors,parts:[]},false);np.autoCreated=true;data.pages.splice(i+1,0,np)}
  return data.pages[i+1];
 }
 function contPartFor(i,part){
